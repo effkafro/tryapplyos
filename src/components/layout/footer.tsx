@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import Image from "next/image";
 
 /** Legal page links */
 const legalLinks = [
@@ -33,7 +34,7 @@ export function Footer() {
           {/* Logo + tagline */}
           <div className="flex flex-col gap-3 max-w-xs">
             <div className="flex items-center gap-2.5">
-              <div className="bg-gradient-to-br from-[#0f766e] to-[#14b8a6] rounded-lg w-7 h-7" />
+              <Image src="/appi-logo.png" alt="Appi" width={28} height={28} className="rounded-lg" />
               <span className="text-base font-bold tracking-tight text-white">
                 ApplyOS
               </span>

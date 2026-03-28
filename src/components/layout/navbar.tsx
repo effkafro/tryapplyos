@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 /** Navigation link items mapped to section IDs */
 const navLinks = [
@@ -25,7 +26,7 @@ export function Navbar() {
       <nav className="mx-auto max-w-6xl flex items-center justify-between px-4 sm:px-6 h-16">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 shrink-0">
-          <div className="bg-gradient-to-br from-[#0f766e] to-[#14b8a6] rounded-lg w-7 h-7" />
+          <Image src="/appi-logo.png" alt="Appi" width={28} height={28} className="rounded-lg" />
           <span className="text-base font-bold tracking-tight text-white">
             ApplyOS
           </span>
