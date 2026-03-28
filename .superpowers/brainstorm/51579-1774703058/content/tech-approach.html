@@ -1,0 +1,83 @@
+<h2>Welcher technische Ansatz für die Homepage?</h2>
+<p class="subtitle">Alle Optionen nutzen den bewährten Stack aus deinem Workspace — die Frage ist: wie viel Framework brauchst du?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Vite + React + React Router (Empfohlen)</h3>
+      <p>Der gleiche Stack wie alle deine Web-Projekte. SPA mit Client-Side Routing. Tailwind CSS + shadcn/ui. i18n mit react-i18next.</p>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>100% konsistent mit deinem Workspace (ATS, Costtracker etc.)</li>
+            <li>Schnellstes Setup — du kennst den Stack</li>
+            <li>Einfaches Vercel-Deployment</li>
+            <li>shadcn/ui Komponenten wiederverwendbar</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Kein SSR → SEO nur mit Prerendering (vite-plugin-ssr oder prerender)</li>
+            <li>Legal-Seiten nicht direkt crawlbar ohne Extra-Arbeit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Next.js (App Router)</h3>
+      <p>React-basiert aber mit Server-Side Rendering. Perfekt für SEO-relevante Seiten. i18n mit next-intl. Vercel-native.</p>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>SEO out-of-the-box (SSR/SSG)</li>
+            <li>Legal-Seiten als statische Pages → perfekt crawlbar</li>
+            <li>Vercel-native — Zero-Config Deployment</li>
+            <li>i18n mit URL-Prefix (/de, /en) eingebaut</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Neuer Stack im Workspace (kein bestehendes Next.js-Projekt)</li>
+            <li>Etwas mehr Komplexität (App Router, Server Components)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Astro + React-Inseln</h3>
+      <p>Static-first Framework. HTML wird zur Buildzeit generiert. React nur wo Interaktivität nötig ist. Extrem schnell.</p>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Beste Performance (nahezu Zero JS shipped)</li>
+            <li>SEO perfekt (rein statisch)</li>
+            <li>Content Collections ideal für Legal-Seiten (Markdown)</li>
+            <li>i18n mit Astro-Bordmitteln</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Komplett neues Framework — anderer Workflow</li>
+            <li>shadcn/ui nicht direkt kompatibel</li>
+            <li>Weniger Ökosystem-Erfahrung in deinem Workspace</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
