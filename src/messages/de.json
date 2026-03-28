@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "ApplyOS — Dein KI-Karriere-Agent",
+    "description": "ApplyOS lernt, was du wirklich willst — und findet täglich die besten Jobs für dich. Ob Berufserfahrene oder Schüler."
+  },
+  "nav": {
+    "features": "Features",
+    "why": "Warum ApplyOS",
+    "faq": "FAQ",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "Dein KI-Karriere-Agent",
+    "title1": "Dein nächster Karriereschritt.",
+    "title2": "Proaktiv. Persönlich. KI-gestützt.",
+    "subtitle": "ApplyOS lernt, was du wirklich willst — und findet täglich die besten Jobs für dich. Ob Berufserfahrene oder Schüler.",
+    "cta": "App Store",
+    "screenshotAlt": "ApplyOS App Screenshot"
+  },
+  "features": {
+    "label": "Features",
+    "title": "Die App, die für dich arbeitet",
+    "items": [
+      {
+        "title": "Proaktive Jobsuche",
+        "description": "Täglich neue Top-Jobs, automatisch auf dich zugeschnitten"
+      },
+      {
+        "title": "Intelligentes Matching",
+        "description": "KI-Match-Score zeigt, wie gut jede Stelle zu dir passt"
+      },
+      {
+        "title": "Auto-Dokumente",
+        "description": "Lebenslauf & Anschreiben generiert aus deinem Profil"
+      },
+      {
+        "title": "Kanban-Pipeline",
+        "description": "Alle Bewerbungen auf einen Blick tracken"
+      }
+    ]
+  },
+  "why": {
+    "label": "Warum ApplyOS?",
+    "title": "Weil du es wert bist.",
+    "problem": {
+      "label": "Klassische Karriereportale",
+      "text": "Optimiert für {highlight}. Du wirst als Ressource vermittelt — so, wie es Arbeitgeber wollen. Dein Profil? Nebensache. Die kognitive Last der Jobsuche? Dein Problem.",
+      "highlight": "Unternehmenskunden"
+    },
+    "solution": {
+      "label": "ApplyOS",
+      "text": "Gebaut {highlight}. Keine Unternehmenskunden. Kein Vermittlungsinteresse. Nur das beste Matching für dich — und so wenig Aufwand wie möglich.",
+      "highlight": "für Bewerber, nicht für Unternehmen"
+    },
+    "stats": {
+      "userFocused": "User-fokussiert",
+      "noCorpClients": "Unternehmenskunden",
+      "lessEffort": "Weniger Aufwand"
+    }
+  },
+  "targetGroups": {
+    "label": "Für wen ist ApplyOS?",
+    "title": "Zwei Wege. Ein Ziel.",
+    "jobSeekers": {
+      "title": "Für Jobsuchende",
+      "subtitle": "Berufserfahrene, Wiedereinsteiger, Wechselwillige",
+      "benefits": [
+        "Erstelle ein Profil und verstehe, was du wirklich suchst",
+        "Täglich neue Top-Jobs — proaktiv auf dich zugeschnitten",
+        "Lebenslauf & Anschreiben automatisch generiert",
+        "Auf die Original-Anzeige bewerben — mit einem Klick",
+        "Alle Bewerbungen im Kanban-Board tracken"
+      ]
+    },
+    "students": {
+      "title": "Für Schüler",
+      "subtitle": "Auf der Suche nach Ausbildung oder Studienplatz",
+      "benefits": [
+        "Psychologisch fundiertes Persönlichkeitsprofiling",
+        "Finde heraus, was wirklich zu dir passt",
+        "Passende Ausbildungsplätze & Studiengänge",
+        "Von \u201EKeine Ahnung\u201C zu einem klaren Plan",
+        "Bewerbungsprozess Schritt für Schritt begleitet"
+      ]
+    }
+  },
+  "howItWorks": {
+    "label": "So funktioniert's",
+    "title": "In 3 Schritten zum Traumjob",
+    "steps": [
+      {
+        "title": "Profil erstellen",
+        "description": "Finde heraus, was du wirklich willst. Die App führt dich durch ein interaktives Profiling — Schüler durchlaufen ein psychologisch fundiertes Modell."
+      },
+      {
+        "title": "Jobs entdecken",
+        "description": "ApplyOS sucht täglich nach den besten Matches. Swipe durch passende Stellen — mit KI-Score, der zeigt wie gut sie zu dir passen."
+      },
+      {
+        "title": "Bewerben & Tracken",
+        "description": "Lass dir ein KI-Anschreiben generieren, bewirb dich über die Original-Anzeige und verfolge alles im Kanban-Board."
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Ist ApplyOS kostenlos?",
+        "answer": "Ja, ApplyOS ist kostenlos im App Store verfügbar. Alle Kernfeatures — Profiling, Jobsuche, Matching und Pipeline — sind ohne Kosten nutzbar."
+      },
+      {
+        "question": "Woher kommen die Stellenangebote?",
+        "answer": "Die Stellenangebote stammen von der Bundesagentur für Arbeit — einer der größten Jobdatenbanken Deutschlands mit hunderttausenden aktuellen Stellen."
+      },
+      {
+        "question": "Kann ich mich direkt aus der App bewerben?",
+        "answer": "ApplyOS leitet dich zur Original-Anzeige weiter, wo du dich direkt bewerben kannst. Vorher generiert die App auf Wunsch ein maßgeschneidertes Anschreiben für dich."
+      },
+      {
+        "question": "Was ist das psychologische Profiling für Schüler?",
+        "answer": "Schüler durchlaufen ein wissenschaftlich fundiertes Persönlichkeitsprofiling. Basierend auf den Ergebnissen schlägt die App passende Ausbildungsplätze oder Studiengänge vor."
+      },
+      {
+        "question": "Werden meine Daten an Unternehmen weitergegeben?",
+        "answer": "Nein. ApplyOS hat keine Unternehmenskunden. Deine Daten gehören dir und werden nicht an Dritte verkauft oder weitergegeben."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für den nächsten Schritt?",
+    "subtitle": "Ob Jobsuche oder Berufsorientierung — lade ApplyOS jetzt kostenlos.",
+    "button": "App Store"
+  },
+  "footer": {
+    "tagline": "Dein KI-Karriere-Agent. Proaktiv. Persönlich. Kostenlos.",
+    "legal": "Rechtliches",
+    "product": "Produkt",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "imprint": "Impressum",
+    "cookies": "Cookie-Richtlinie",
+    "features": "Features",
+    "howItWorks": "So funktioniert's",
+    "faq": "FAQ",
+    "copyright": "© 2026 ApplyOS. Alle Rechte vorbehalten."
+  }
+}

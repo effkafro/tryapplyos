@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "title": "ApplyOS — Your AI Career Agent",
+    "description": "ApplyOS learns what you truly want — and finds the best jobs for you every day. Whether you're experienced or a student."
+  },
+  "nav": {
+    "features": "Features",
+    "why": "Why ApplyOS",
+    "faq": "FAQ",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "Your AI Career Agent",
+    "title1": "Your next career move.",
+    "title2": "Proactive. Personal. AI-powered.",
+    "subtitle": "ApplyOS learns what you truly want — and finds the best jobs for you every day. Whether you're experienced or a student.",
+    "cta": "App Store",
+    "screenshotAlt": "ApplyOS App Screenshot"
+  },
+  "features": {
+    "label": "Features",
+    "title": "The app that works for you",
+    "items": [
+      {
+        "title": "Proactive Job Search",
+        "description": "New top jobs every day, automatically tailored to you"
+      },
+      {
+        "title": "Smart Matching",
+        "description": "AI match score shows how well each position fits you"
+      },
+      {
+        "title": "Auto Documents",
+        "description": "Resume & cover letter generated from your profile"
+      },
+      {
+        "title": "Kanban Pipeline",
+        "description": "Track all your applications at a glance"
+      }
+    ]
+  },
+  "why": {
+    "label": "Why ApplyOS?",
+    "title": "Because you're worth it.",
+    "problem": {
+      "label": "Traditional Career Portals",
+      "text": "Optimized for {highlight}. You're treated as a resource — placed the way employers want. Your profile? Secondary. The cognitive load of job searching? Your problem.",
+      "highlight": "corporate clients"
+    },
+    "solution": {
+      "label": "ApplyOS",
+      "text": "Built {highlight}. No corporate clients. No placement interests. Just the best matching for you — with as little effort as possible.",
+      "highlight": "for applicants, not for companies"
+    },
+    "stats": {
+      "userFocused": "User-focused",
+      "noCorpClients": "Corporate clients",
+      "lessEffort": "Less effort"
+    }
+  },
+  "targetGroups": {
+    "label": "Who is ApplyOS for?",
+    "title": "Two paths. One goal.",
+    "jobSeekers": {
+      "title": "For Job Seekers",
+      "subtitle": "Professionals, career changers, returning workers",
+      "benefits": [
+        "Create a profile and discover what you truly want",
+        "New top jobs daily — proactively tailored to you",
+        "Resume & cover letter automatically generated",
+        "Apply via the original listing — with one click",
+        "Track all applications in a Kanban board"
+      ]
+    },
+    "students": {
+      "title": "For Students",
+      "subtitle": "Looking for apprenticeships or university programs",
+      "benefits": [
+        "Psychologically grounded personality profiling",
+        "Find out what truly fits you",
+        "Matching apprenticeships & study programs",
+        "From \"no idea\" to a clear plan",
+        "Application process guided step by step"
+      ]
+    }
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "title": "Your dream job in 3 steps",
+    "steps": [
+      {
+        "title": "Create your profile",
+        "description": "Find out what you really want. The app guides you through interactive profiling — students go through a psychologically grounded model."
+      },
+      {
+        "title": "Discover jobs",
+        "description": "ApplyOS searches daily for the best matches. Swipe through fitting positions — with an AI score showing how well they match."
+      },
+      {
+        "title": "Apply & Track",
+        "description": "Generate an AI cover letter, apply via the original listing, and track everything in a Kanban board."
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is ApplyOS free?",
+        "answer": "Yes, ApplyOS is free on the App Store. All core features — profiling, job search, matching, and pipeline — are available at no cost."
+      },
+      {
+        "question": "Where do the job listings come from?",
+        "answer": "Job listings come from the German Federal Employment Agency — one of the largest job databases in Germany with hundreds of thousands of current positions."
+      },
+      {
+        "question": "Can I apply directly from the app?",
+        "answer": "ApplyOS redirects you to the original listing where you can apply directly. Before that, the app can generate a tailored cover letter for you."
+      },
+      {
+        "question": "What is the psychological profiling for students?",
+        "answer": "Students go through a scientifically grounded personality profiling. Based on the results, the app suggests matching apprenticeships or study programs."
+      },
+      {
+        "question": "Is my data shared with companies?",
+        "answer": "No. ApplyOS has no corporate clients. Your data belongs to you and is never sold or shared with third parties."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for the next step?",
+    "subtitle": "Whether job search or career orientation — download ApplyOS for free.",
+    "button": "App Store"
+  },
+  "footer": {
+    "tagline": "Your AI Career Agent. Proactive. Personal. Free.",
+    "legal": "Legal",
+    "product": "Product",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "imprint": "Imprint",
+    "cookies": "Cookie Policy",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "faq": "FAQ",
+    "copyright": "© 2026 ApplyOS. All rights reserved."
+  }
+}
