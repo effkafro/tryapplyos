@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "723283C372.com.applyos.app"
+        ],
+        "components": [
+          {
+            "/": "/auth/reset*",
+            "comment": "Matches any URL beginning with /auth/reset"
+          },
+          {
+            "/": "/de/auth/reset*",
+            "comment": "Matches localized German variant"
+          },
+          {
+            "/": "/en/auth/reset*",
+            "comment": "Matches localized English variant"
+          }
+        ]
+      }
+    ]
+  }
+}
