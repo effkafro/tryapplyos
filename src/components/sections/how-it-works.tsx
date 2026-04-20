@@ -1,16 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { SectionHeader } from "@/components/ui/section-header";
 
 const stepGradients = [
-  "from-[#2dd4bf] to-[#0f766e]",
-  "from-[#818cf8] to-[#6366f1]",
-  "from-[#a78bfa] to-[#8b5cf6]",
+  "from-brand-teal to-brand-teal-dark",
+  "from-brand-indigo-light to-brand-indigo",
+  "from-brand-purple-light to-brand-purple",
 ];
 
 const lineGradients = [
-  "from-[#2dd4bf]/40 to-[#818cf8]/20",
-  "from-[#818cf8]/40 to-[#a78bfa]/20",
+  "from-brand-teal/40 to-brand-indigo-light/20",
+  "from-brand-indigo-light/40 to-brand-purple-light/20",
 ];
 
 export function HowItWorks() {
@@ -19,15 +20,14 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="bg-gradient-to-b from-[#0f172a] to-[#1e1b4b] py-20"
+      className="bg-gradient-to-b from-brand-bg to-brand-indigo-deep py-20"
     >
       <div className="mx-auto max-w-2xl px-6">
-        <div className="mb-12 text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#818cf8]">
-            {t("label")}
-          </span>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">{t("title")}</h2>
-        </div>
+        <SectionHeader
+          label={t("label")}
+          title={t("title")}
+          labelClassName="text-brand-indigo-light"
+        />
 
         <div className="flex flex-col">
           {[0, 1, 2].map((i) => (
@@ -52,7 +52,7 @@ export function HowItWorks() {
                 <h3 className="text-base font-bold">
                   {t(`steps.${i}.title`)}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#94a3b8]">
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                   {t(`steps.${i}.description`)}
                 </p>
               </div>

@@ -17,11 +17,11 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
       <Navbar />
       <main className="mx-auto max-w-3xl px-6 pt-32 pb-20">
         <h1 className="mb-8 text-3xl font-bold">{isDE ? "Cookie-Richtlinie" : "Cookie Policy"}</h1>
-        <div className="space-y-6 text-sm leading-relaxed text-[#94a3b8]">
+        <div className="space-y-6 text-sm leading-relaxed text-ink-muted">
           <p>{isDE ? "Stand: März 2026" : "Last updated: March 2026"}</p>
 
           {/* 1. Was sind Cookies? */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "1. Was sind Cookies?" : "1. What are Cookies?"}
           </h2>
           <p>
@@ -31,7 +31,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
           </p>
 
           {/* 2. Welche Cookies nutzen wir? */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "2. Welche Cookies nutzen wir?" : "2. Which Cookies Do We Use?"}
           </h2>
           <p>
@@ -41,7 +41,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
           </p>
 
           {/* 3. Notwendige Cookies */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "3. Notwendige Cookies" : "3. Necessary Cookies"}
           </h2>
           <p>
@@ -51,7 +51,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
           </p>
           <ul className="list-disc space-y-1 pl-6">
             <li>
-              <span className="font-medium text-[#e2e8f0]">NEXT_LOCALE</span>
+              <span className="font-medium text-ink">NEXT_LOCALE</span>
               {" — "}
               {isDE
                 ? "Speichert Ihre bevorzugte Sprache (Deutsch/Englisch), damit die Website bei Folgebesuchen in der richtigen Sprache angezeigt wird."
@@ -60,7 +60,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
           </ul>
 
           {/* 4. Ihre Rechte */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "4. Ihre Rechte" : "4. Your Rights"}
           </h2>
           <p>
@@ -75,21 +75,21 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
           </p>
           <ul className="list-disc space-y-1 pl-6">
             <li>
-              <span className="font-medium text-[#e2e8f0]">Chrome:</span>
+              <span className="font-medium text-ink">Chrome:</span>
               {" "}
               {isDE
                 ? "Einstellungen → Datenschutz und Sicherheit → Cookies und andere Websitedaten"
                 : "Settings → Privacy and Security → Cookies and other site data"}
             </li>
             <li>
-              <span className="font-medium text-[#e2e8f0]">Safari:</span>
+              <span className="font-medium text-ink">Safari:</span>
               {" "}
               {isDE
                 ? "Einstellungen → Datenschutz → Cookies und Websitedaten verwalten"
                 : "Settings → Privacy → Manage Website Data"}
             </li>
             <li>
-              <span className="font-medium text-[#e2e8f0]">Firefox:</span>
+              <span className="font-medium text-ink">Firefox:</span>
               {" "}
               {isDE
                 ? "Einstellungen → Datenschutz & Sicherheit → Cookies und Website-Daten"
@@ -98,7 +98,7 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
           </ul>
 
           {/* 5. Kontakt */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "5. Kontakt" : "5. Contact"}
           </h2>
           <p>

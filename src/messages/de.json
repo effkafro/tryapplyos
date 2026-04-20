@@ -7,7 +7,9 @@
     "features": "Features",
     "why": "Warum ApplyOS",
     "faq": "FAQ",
-    "download": "Download"
+    "download": "Download",
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen"
   },
   "hero": {
     "badge": "Dein KI-Karriere-Agent",

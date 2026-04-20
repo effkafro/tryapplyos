@@ -18,9 +18,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const siteUrl = "https://tryapplyos.app";
+  const ogImage = {
+    url: `${siteUrl}/og-image.png`,
+    width: 1200,
+    height: 630,
+    alt: t("title"),
+  };
+
   return {
     title: t("title"),
     description: t("description"),
+    metadataBase: new URL(siteUrl),
     icons: {
       icon: "/favicon.ico",
       apple: "/apple-touch-icon.png",
@@ -29,7 +38,20 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       type: "website",
-      url: "https://tryapplyos.app",
+      url: siteUrl,
+      siteName: "ApplyOS",
+      locale: locale === "de" ? "de_DE" : "en_US",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: [ogImage.url],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
@@ -54,7 +76,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${plusJakarta.variable} antialiased dark`}>
-      <body className="min-h-dvh bg-[#0f172a] text-white font-sans">
+      <body className="min-h-dvh bg-brand-bg text-white font-sans">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

@@ -2,19 +2,20 @@
 
 import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
+import { SectionHeader } from "@/components/ui/section-header";
 
 const groups = [
   {
     key: "jobSeekers",
-    accentColor: "text-[#2dd4bf]",
+    accentColor: "text-brand-teal",
     mockupBg:
-      "from-[#0f766e]/20 to-[#2dd4bf]/[0.08] border-[#2dd4bf]/20",
+      "from-brand-teal-dark/20 to-brand-teal/[0.08] border-brand-teal/20",
   },
   {
     key: "students",
-    accentColor: "text-[#818cf8]",
+    accentColor: "text-brand-indigo-light",
     mockupBg:
-      "from-[#6366f1]/20 to-[#8b5cf6]/[0.08] border-[#818cf8]/20",
+      "from-brand-indigo/20 to-brand-purple/[0.08] border-brand-indigo-light/20",
   },
 ] as const;
 
@@ -22,14 +23,9 @@ export function TargetGroups() {
   const t = useTranslations("targetGroups");
 
   return (
-    <section className="bg-[#0f172a] py-20">
+    <section className="bg-brand-bg py-20">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="mb-12 text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#2dd4bf]">
-            {t("label")}
-          </span>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">{t("title")}</h2>
-        </div>
+        <SectionHeader label={t("label")} title={t("title")} />
 
         <div className="mx-auto flex max-w-3xl flex-col gap-6">
           {groups.map(({ key, accentColor, mockupBg }) => (
@@ -53,7 +49,7 @@ export function TargetGroups() {
                 <h3 className={`text-lg font-bold ${accentColor}`}>
                   {t(`${key}.title`)}
                 </h3>
-                <p className="mt-1 text-sm text-[#94a3b8]">
+                <p className="mt-1 text-sm text-ink-muted">
                   {t(`${key}.subtitle`)}
                 </p>
 
@@ -61,7 +57,7 @@ export function TargetGroups() {
                   {[0, 1, 2, 3, 4].map((i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-2 text-sm text-[#e2e8f0]"
+                      className="flex items-start gap-2 text-sm text-ink"
                     >
                       <Check
                         className={`mt-0.5 h-4 w-4 flex-shrink-0 ${accentColor}`}

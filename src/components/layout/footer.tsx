@@ -1,8 +1,9 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
 
 /** Legal page links */
 const legalLinks = [
@@ -21,13 +22,9 @@ const productLinks = [
 
 export function Footer() {
   const t = useTranslations("footer");
-  const locale = useLocale();
-  const pathname = usePathname();
-
-  const otherLocale = locale === "de" ? "en" : "de";
 
   return (
-    <footer className="bg-[#020617]">
+    <footer className="bg-brand-bg-deep">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12 md:py-16">
         {/* Top section */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-16">
@@ -39,7 +36,7 @@ export function Footer() {
                 ApplyOS
               </span>
             </div>
-            <p className="text-sm text-[#94a3b8] leading-relaxed">
+            <p className="text-sm text-ink-muted leading-relaxed">
               {t("tagline")}
             </p>
           </div>
@@ -48,7 +45,7 @@ export function Footer() {
           <div className="flex gap-16 sm:gap-24">
             {/* Legal */}
             <div className="flex flex-col gap-3">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#64748b]">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-dim">
                 {t("legal")}
               </h3>
               <ul className="flex flex-col gap-2">
@@ -56,7 +53,7 @@ export function Footer() {
                   <li key={key}>
                     <Link
                       href={href}
-                      className="text-sm text-[#94a3b8] hover:text-white transition-colors"
+                      className="text-sm text-ink-muted hover:text-white transition-colors"
                     >
                       {t(key)}
                     </Link>
@@ -67,7 +64,7 @@ export function Footer() {
 
             {/* Product */}
             <div className="flex flex-col gap-3">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-[#64748b]">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-dim">
                 {t("product")}
               </h3>
               <ul className="flex flex-col gap-2">
@@ -75,7 +72,7 @@ export function Footer() {
                   <li key={key}>
                     <a
                       href={href}
-                      className="text-sm text-[#94a3b8] hover:text-white transition-colors"
+                      className="text-sm text-ink-muted hover:text-white transition-colors"
                     >
                       {t(key)}
                     </a>
@@ -90,32 +87,9 @@ export function Footer() {
         <div className="border-t border-white/[0.06] mt-10 pt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Copyright */}
-            <p className="text-xs text-[#475569]">{t("copyright")}</p>
+            <p className="text-xs text-ink-faint">{t("copyright")}</p>
 
-            {/* Language switcher */}
-            <div className="flex items-center gap-1 text-xs">
-              <span
-                className={
-                  locale === "de"
-                    ? "text-white font-semibold"
-                    : "text-[#94a3b8]"
-                }
-              >
-                DE
-              </span>
-              <span className="text-[#475569]">|</span>
-              <Link
-                href={pathname}
-                locale={otherLocale}
-                className={
-                  locale === "en"
-                    ? "text-white font-semibold"
-                    : "text-[#94a3b8] hover:text-white transition-colors"
-                }
-              >
-                EN
-              </Link>
-            </div>
+            <LanguageSwitcher size="xs" />
           </div>
         </div>
       </div>

@@ -7,19 +7,15 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export function Faq() {
   const t = useTranslations("faq");
 
   return (
-    <section id="faq" className="bg-[#0f172a] py-20">
+    <section id="faq" className="bg-brand-bg py-20">
       <div className="mx-auto max-w-2xl px-6">
-        <div className="mb-12 text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#2dd4bf]">
-            {t("label")}
-          </span>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">{t("title")}</h2>
-        </div>
+        <SectionHeader label={t("label")} title={t("title")} />
 
         <Accordion defaultValue={[0]}>
           {[0, 1, 2, 3, 4].map((i) => (
@@ -31,7 +27,7 @@ export function Faq() {
               <AccordionTrigger className="py-4 text-sm font-medium hover:no-underline">
                 {t(`items.${i}.question`)}
               </AccordionTrigger>
-              <AccordionContent className="text-sm leading-relaxed text-[#94a3b8]">
+              <AccordionContent className="text-sm leading-relaxed text-ink-muted">
                 {t(`items.${i}.answer`)}
               </AccordionContent>
             </AccordionItem>

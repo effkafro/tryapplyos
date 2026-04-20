@@ -17,10 +17,10 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
       <Navbar />
       <main className="mx-auto max-w-3xl px-6 pt-32 pb-20">
         <h1 className="mb-8 text-3xl font-bold">{isDE ? "Impressum" : "Imprint / Legal Notice"}</h1>
-        <div className="space-y-6 text-sm leading-relaxed text-[#94a3b8]">
+        <div className="space-y-6 text-sm leading-relaxed text-ink-muted">
 
           {/* Angaben gemäß §5 DDG */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "Angaben gemäß §5 DDG" : "Information pursuant to §5 DDG"}
           </h2>
           <p className="whitespace-pre-line">
@@ -30,7 +30,7 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
           </p>
 
           {/* Verantwortlich für den Inhalt */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "Verantwortlich für den Inhalt nach §18 Abs. 2 MStV" : "Responsible for content pursuant to §18(2) MStV"}
           </h2>
           <p className="whitespace-pre-line">
@@ -40,7 +40,7 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
           </p>
 
           {/* Streitschlichtung */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "Streitschlichtung" : "Dispute Resolution"}
           </h2>
           <p>
@@ -53,7 +53,7 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
               href="https://ec.europa.eu/consumers/odr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#2dd4bf] underline underline-offset-2 hover:text-[#5eead4]"
+              className="text-brand-teal underline underline-offset-2 hover:text-[#5eead4]"
             >
               https://ec.europa.eu/consumers/odr
             </a>
@@ -65,7 +65,7 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
           </p>
 
           {/* Haftung für Inhalte */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "Haftung für Inhalte" : "Liability for Content"}
           </h2>
           <p>
@@ -75,7 +75,7 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
           </p>
 
           {/* Haftung für Links */}
-          <h2 className="text-lg font-semibold text-[#e2e8f0]">
+          <h2 className="text-lg font-semibold text-ink">
             {isDE ? "Haftung für Links" : "Liability for Links"}
           </h2>
           <p>

@@ -7,7 +7,9 @@
     "features": "Features",
     "why": "Why ApplyOS",
     "faq": "FAQ",
-    "download": "Download"
+    "download": "Download",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "hero": {
     "badge": "Your AI Career Agent",
