@@ -32,11 +32,14 @@ function isAuthorized(req: NextRequest): boolean {
 }
 
 export default function middleware(req: NextRequest) {
-  if (!isAuthorized(req)) return unauthorized();
   const { pathname } = req.nextUrl;
+  // Statische Public-Assets (Logo, OG-Image, Favicon-Variants etc.) sind nicht
+  // sensitiv und müssen vor der Basic-Auth durchgelassen werden, damit auch
+  // next/image sie serverseitig laden kann (lädt ohne Auth-Header).
   if (/\.[a-z0-9]+$/i.test(pathname) || pathname.startsWith("/.well-known/")) {
     return NextResponse.next();
   }
+  if (!isAuthorized(req)) return unauthorized();
   return intl(req);
 }
 
