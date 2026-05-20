@@ -59,7 +59,7 @@ export function ScreenWaitlistConfirm({ count, locale }: Props) {
             <div
               key={i}
               className={`flex-1 h-1 rounded-[1px] ${
-                i < 5 ? "bg-app-teal" : "bg-app-divider"
+                i < 8 ? "bg-app-teal" : "bg-app-divider"
               }`}
             />
           ))}

@@ -147,7 +147,7 @@
       "positionValue": "Platz {position}",
       "totalSignups": "von {total} Plätzen",
       "betaStart": "Beta-Start",
-      "betaDate": "Q3 '26",
+      "betaDate": "in 24h",
       "notify": "Wir benachrichtigen dich per E-Mail."
     },
     "toastSuccess": "Du bist auf der Warteliste!",

@@ -147,7 +147,7 @@
       "positionValue": "Spot #{position}",
       "totalSignups": "of {total} spots",
       "betaStart": "Beta start",
-      "betaDate": "Q3 '26",
+      "betaDate": "in 24h",
       "notify": "We'll notify you by email."
     },
     "toastSuccess": "You're on the waitlist!",
