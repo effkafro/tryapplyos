@@ -134,7 +134,7 @@ export function Waitlist({ initialCount = 0 }: Props) {
                 placeholder={t("emailPlaceholder")}
                 disabled={isLocked}
                 aria-label={t("emailPlaceholder")}
-                className="flex-1 px-4 py-3 bg-transparent border-0 outline-none text-e-text text-sm font-sans placeholder:text-e-faint disabled:cursor-not-allowed"
+                className="flex-1 min-w-0 px-4 py-3 bg-transparent border-0 outline-none appearance-none text-e-text text-sm font-sans placeholder:text-e-faint disabled:cursor-not-allowed disabled:opacity-100 disabled:bg-transparent disabled:text-e-text"
               />
               {/* Honeypot */}
               <input

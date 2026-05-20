@@ -168,6 +168,19 @@
   html {
     @apply font-sans;
   }
+
+  /* Chrome/Safari autofill darf den Twilight-Background nicht weiß überschreiben */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--color-e-text);
+    -webkit-box-shadow: 0 0 0 1000px var(--color-e-bg) inset;
+    caret-color: var(--color-e-text);
+    transition:
+      background-color 9999s ease-out,
+      color 9999s ease-out;
+  }
 }
 
 @keyframes ping {
