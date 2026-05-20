@@ -1,5 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
+import { WAITLIST_LIMIT } from "@/lib/config";
 import { formatWaitlistNumber } from "@/lib/format";
 
 type Props = {
@@ -11,7 +12,7 @@ export function ScreenWaitlistConfirm({ count, locale }: Props) {
   const t = useTranslations("waitlist");
   const fmt = (n: number) => formatWaitlistNumber(n, locale);
   const position = fmt(count);
-  const total = fmt(count + 12);
+  const total = fmt(WAITLIST_LIMIT);
   const positionValue = t("confirm.positionValue", { position });
   const totalSignups = t("confirm.totalSignups", { total });
 

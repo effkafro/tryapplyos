@@ -13,3 +13,10 @@ export const ENABLE_APP_STORE_CTA =
  * → Display = WAITLIST_BASE_COUNT + actualDbCount.
  */
 export const WAITLIST_BASE_COUNT = 28;
+
+/**
+ * Closed-Beta-Limit. Wird in der Waitlist-Section und im
+ * ScreenWaitlistConfirm-Mockup als Gesamtdeckel angezeigt
+ * ("Platz 29 von 100 Plätzen").
+ */
+export const WAITLIST_LIMIT = 100;

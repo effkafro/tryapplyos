@@ -145,7 +145,7 @@
       "sub": "You're on the list.",
       "positionLabel": "Your position",
       "positionValue": "Spot #{position}",
-      "totalSignups": "of {total} signups",
+      "totalSignups": "of {total} spots",
       "betaStart": "Beta start",
       "betaDate": "Q3 '26",
       "notify": "We'll notify you by email."
