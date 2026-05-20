@@ -17,11 +17,11 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
       <Navbar />
       <main className="mx-auto max-w-3xl px-6 pt-32 pb-20">
         <h1 className="mb-8 text-3xl font-bold">{isDE ? "Nutzungsbedingungen" : "Terms of Service"}</h1>
-        <div className="space-y-6 text-sm leading-relaxed text-ink-muted">
+        <div className="space-y-6 text-sm leading-relaxed text-e-text-2">
           <p>{isDE ? "Stand: März 2026" : "Last updated: March 2026"}</p>
 
           {/* 1. Geltungsbereich */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "1. Geltungsbereich" : "1. Scope"}
           </h2>
           <p>
@@ -31,7 +31,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </p>
 
           {/* 2. Nutzung der App */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "2. Nutzung der App" : "2. Use of the App"}
           </h2>
           <p>
@@ -41,7 +41,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </p>
 
           {/* 3. Stellenangebote */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "3. Stellenangebote" : "3. Job Listings"}
           </h2>
           <p>
@@ -51,7 +51,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </p>
 
           {/* 4. Generierte Inhalte */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "4. Generierte Inhalte" : "4. Generated Content"}
           </h2>
           <p>
@@ -61,7 +61,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </p>
 
           {/* 5. Verfügbarkeit */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "5. Verfügbarkeit" : "5. Availability"}
           </h2>
           <p>
@@ -71,7 +71,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </p>
 
           {/* 6. Haftungsbeschränkung */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "6. Haftungsbeschränkung" : "6. Limitation of Liability"}
           </h2>
           <p>
@@ -81,7 +81,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </p>
 
           {/* 7. Änderungen der Nutzungsbedingungen */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "7. Änderungen der Nutzungsbedingungen" : "7. Changes to Terms"}
           </h2>
           <p>
@@ -91,7 +91,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </p>
 
           {/* 8. Anwendbares Recht */}
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "8. Anwendbares Recht" : "8. Applicable Law"}
           </h2>
           <p>

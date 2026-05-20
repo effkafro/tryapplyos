@@ -10,37 +10,37 @@ type Props = {
   className?: string;
 };
 
+const LOCALES = ["de", "en"] as const;
+type Locale = (typeof LOCALES)[number];
+
 export function LanguageSwitcher({ size = "sm", onNavigate, className }: Props) {
   const locale = useLocale();
   const pathname = usePathname();
-  const otherLocale = locale === "de" ? "en" : "de";
-
   const textSize = size === "xs" ? "text-xs" : "text-sm";
 
   return (
     <div className={cn("flex items-center gap-1", textSize, className)}>
-      <span
-        className={
-          locale === "de"
-            ? "text-white font-semibold"
-            : "text-ink-muted"
-        }
-      >
-        DE
-      </span>
-      <span className="text-ink-faint">|</span>
-      <Link
-        href={pathname}
-        locale={otherLocale}
-        onClick={onNavigate}
-        className={
-          locale === "en"
-            ? "text-white font-semibold"
-            : "text-ink-muted hover:text-white transition-colors"
-        }
-      >
-        EN
-      </Link>
+      {LOCALES.map((target: Locale, i) => {
+        const isActive = locale === target;
+        return (
+          <span key={target} className="flex items-center gap-1">
+            {i > 0 && <span className="text-e-faint">|</span>}
+            <Link
+              href={pathname}
+              locale={target}
+              onClick={onNavigate}
+              aria-current={isActive ? "page" : undefined}
+              className={cn(
+                isActive
+                  ? "text-e-text font-semibold cursor-default"
+                  : "text-e-text-2 hover:text-e-text transition-colors",
+              )}
+            >
+              {target.toUpperCase()}
+            </Link>
+          </span>
+        );
+      })}
     </div>
   );
 }

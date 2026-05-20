@@ -5,147 +5,201 @@
   },
   "nav": {
     "features": "Features",
-    "why": "Why ApplyOS",
+    "why": "Why",
+    "how": "How it works",
+    "waitlist": "Early Access",
     "faq": "FAQ",
-    "download": "Download",
+    "download": "Join waitlist",
     "menuOpen": "Open menu",
     "menuClose": "Close menu"
   },
   "hero": {
-    "badge": "Your AI Career Agent",
-    "title1": "Your next career move.",
-    "title2": "Proactive. Personal. AI-powered.",
-    "subtitle": "ApplyOS learns what you truly want — and finds the best jobs for you every day. Whether you're experienced or a student.",
-    "cta": "App Store",
-    "screenshotAlt": "ApplyOS App Screenshot"
+    "eyebrow": "Exclusive Early Access · Closed Beta",
+    "title": ["Your next career move.", "Proactive. Personal. AI-powered."],
+    "subtitle": "ApplyOS learns what you actually want — and finds the best jobs for you every day. For experienced professionals and students alike.",
+    "cta": "Join the waitlist",
+    "meta": "Free · Limited spots",
+    "screenshotAlt": "ApplyOS App Preview"
   },
   "features": {
-    "label": "Features",
-    "title": "The app that works for you",
+    "eyebrow": "Features",
+    "title": "The app that works for you.",
+    "sub": "Three core capabilities that redefine your job search.",
     "items": [
       {
-        "title": "Proactive Job Search",
-        "description": "New top jobs every day, automatically tailored to you"
+        "tag": "Every morning",
+        "title": "Proactive job search",
+        "desc": "Fresh top matches every day, automatically tailored to you — no filters, no keywords.",
+        "label": "Radar"
       },
       {
-        "title": "Smart Matching",
-        "description": "AI match score shows how well each position fits you"
+        "tag": "In detail",
+        "title": "Smart matching",
+        "desc": "An AI score shows at a glance how well each role actually fits your profile.",
+        "label": "Job detail"
       },
       {
-        "title": "Auto Documents",
-        "description": "Resume & cover letter generated from your profile"
-      },
-      {
-        "title": "Kanban Pipeline",
-        "description": "Track all your applications at a glance"
+        "tag": "At a glance",
+        "title": "Kanban pipeline",
+        "desc": "All applications at a glance: Discovered, Applied, Interview, Offer.",
+        "label": "Pipeline"
       }
     ]
   },
   "why": {
-    "label": "Why ApplyOS?",
+    "eyebrow": "Why ApplyOS",
     "title": "Because you're worth it.",
     "problem": {
-      "label": "Traditional Career Portals",
-      "text": "Optimized for {highlight}. You're treated as a resource — placed the way employers want. Your profile? Secondary. The cognitive load of job searching? Your problem.",
-      "highlight": "corporate clients"
+      "label": "Classic career portals",
+      "text": "Optimized for corporate clients. You're brokered as a resource — the way employers want. Your profile? Secondary. The cognitive load? Your problem."
     },
     "solution": {
       "label": "ApplyOS",
-      "text": "Built {highlight}. No corporate clients. No placement interests. Just the best matching for you — with as little effort as possible.",
-      "highlight": "for applicants, not for companies"
+      "text": "Built for applicants, not for companies. No corporate clients. No placement incentives. Just the best match for you — with as little effort as possible."
     },
-    "stats": {
-      "userFocused": "User-focused",
-      "noCorpClients": "Corporate clients",
-      "lessEffort": "Less effort"
-    }
+    "stats": [
+      { "num": "100%", "label": "User-focused" },
+      { "num": "0", "label": "Corporate clients" },
+      { "num": "↓ 85%", "label": "Less effort" }
+    ]
   },
-  "targetGroups": {
-    "label": "Who is ApplyOS for?",
+  "groups": {
+    "eyebrow": "Who ApplyOS is for",
     "title": "Two paths. One goal.",
-    "jobSeekers": {
-      "title": "For Job Seekers",
-      "subtitle": "Professionals, career changers, returning workers",
-      "benefits": [
-        "Create a profile and discover what you truly want",
-        "New top jobs daily — proactively tailored to you",
-        "Resume & cover letter automatically generated",
-        "Apply via the original listing — with one click",
-        "Track all applications in a Kanban board"
-      ]
-    },
-    "students": {
-      "title": "For Students",
-      "subtitle": "Looking for apprenticeships or university programs",
-      "benefits": [
-        "Psychologically grounded personality profiling",
-        "Find out what truly fits you",
-        "Matching apprenticeships & study programs",
-        "From \"no idea\" to a clear plan",
-        "Application process guided step by step"
-      ]
-    }
-  },
-  "howItWorks": {
-    "label": "How it works",
-    "title": "Your dream job in 3 steps",
-    "steps": [
+    "cards": [
       {
-        "title": "Create your profile",
-        "description": "Find out what you really want. The app guides you through interactive profiling — students go through a psychologically grounded model."
+        "accent": "teal",
+        "title": "For job seekers",
+        "sub": "Experienced · Returnees · Switchers",
+        "points": [
+          "Build a profile and understand what you actually want",
+          "Fresh top jobs every day — proactively tailored to you",
+          "CV & cover letter generated automatically",
+          "Apply on the original listing — one tap",
+          "Track every application in the Kanban board"
+        ]
       },
       {
-        "title": "Discover jobs",
-        "description": "ApplyOS searches daily for the best matches. Swipe through fitting positions — with an AI score showing how well they match."
-      },
-      {
-        "title": "Apply & Track",
-        "description": "Generate an AI cover letter, apply via the original listing, and track everything in a Kanban board."
+        "accent": "indigo",
+        "title": "For students",
+        "sub": "Apprenticeships · University · Career orientation",
+        "points": [
+          "Psychology-backed personality profiling",
+          "Discover what genuinely fits you",
+          "Matching apprenticeships & study programs",
+          "From \"no idea\" to a clear plan",
+          "Step-by-step guidance through every application"
+        ]
       }
     ]
   },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Three steps to your dream job.",
+    "stepLabel": "Step",
+    "steps": [
+      {
+        "title": "Build your profile",
+        "desc": "Figure out what you actually want. The app walks you through an interactive profiling — students go through a psychology-backed model."
+      },
+      {
+        "title": "Discover jobs",
+        "desc": "ApplyOS searches for the best matches every day. Swipe through curated roles — each with an AI score showing fit."
+      },
+      {
+        "title": "Apply & track",
+        "desc": "Generate an AI cover letter, apply on the original listing, and track everything in your Kanban board."
+      }
+    ]
+  },
+  "waitlist": {
+    "eyebrow": "Exclusive Early Access",
+    "title": ["Exclusive Early Access.", "Limited spots."],
+    "sub": "ApplyOS is launching closed. We invite the waitlist in waves — grab your spot.",
+    "emailPlaceholder": "your@email.com",
+    "submit": "Secure my spot",
+    "submittedLabel": "Confirmed ✓",
+    "successMessage": "You're on the list — spot #{position}.",
+    "alreadyRegisteredMessage": "This email is already on the waitlist.",
+    "consentLabelPrefix": "I accept the ",
+    "consentLink": "privacy policy",
+    "consentLabelSuffix": " and allow ApplyOS to contact me by email about the beta launch. I can withdraw consent at any time.",
+    "consentRequired": "Please accept the privacy terms.",
+    "legal": "By signing up you accept our privacy terms. No spam.",
+    "stats": [
+      { "num": "100", "label": "Spots in the closed beta" },
+      { "num": "0", "label": "already taken" }
+    ],
+    "live": "Live",
+    "perks": {
+      "label": "What you get",
+      "items": [
+        "Full access to ApplyOS — before the official launch",
+        "Direct line to the team — your feedback shapes the product",
+        "Development updates — before they go public"
+      ]
+    },
+    "confirm": {
+      "appName": "ApplyOS",
+      "title": "Welcome aboard.",
+      "sub": "You're on the list.",
+      "positionLabel": "Your position",
+      "positionValue": "Spot #{position}",
+      "totalSignups": "of {total} spots",
+      "betaStart": "Beta start",
+      "betaDate": "in 24h",
+      "notify": "We'll notify you by email."
+    },
+    "toastSuccess": "You're on the waitlist!",
+    "toastDuplicate": "This email is already registered.",
+    "toastError": "Something went wrong. Please try again."
+  },
   "faq": {
-    "label": "FAQ",
-    "title": "Frequently Asked Questions",
+    "eyebrow": "FAQ",
+    "title": "Common questions.",
     "items": [
       {
-        "question": "Is ApplyOS free?",
-        "answer": "Yes, ApplyOS is free on the App Store. All core features — profiling, job search, matching, and pipeline — are available at no cost."
+        "q": "Is ApplyOS free?",
+        "a": "Yes — ApplyOS is free on the App Store. Profiling, search, matching and pipeline are all included with no cost."
       },
       {
-        "question": "Where do the job listings come from?",
-        "answer": "Job listings come from the German Federal Employment Agency — one of the largest job databases in Germany with hundreds of thousands of current positions."
+        "q": "Where do the listings come from?",
+        "a": "Listings come from one of Germany's largest job databases, with hundreds of thousands of live roles."
       },
       {
-        "question": "Can I apply directly from the app?",
-        "answer": "ApplyOS redirects you to the original listing where you can apply directly. Before that, the app can generate a tailored cover letter for you."
+        "q": "Can I apply directly from the app?",
+        "a": "ApplyOS hands you off to the original listing where you apply directly. The app can generate a tailored cover letter for you first."
       },
       {
-        "question": "What is the psychological profiling for students?",
-        "answer": "Students go through a scientifically grounded personality profiling. Based on the results, the app suggests matching apprenticeships or study programs."
+        "q": "What's the psychology profiling for students?",
+        "a": "Students go through a scientifically grounded personality assessment. Based on the results, the app suggests fitting apprenticeships or study programs."
       },
       {
-        "question": "Is my data shared with companies?",
-        "answer": "No. ApplyOS has no corporate clients. Your data belongs to you and is never sold or shared with third parties."
+        "q": "Is my data shared with companies?",
+        "a": "No. ApplyOS has no corporate clients. Your data is yours — never sold, never shared."
       }
     ]
   },
   "cta": {
-    "title": "Ready for the next step?",
-    "subtitle": "Whether job search or career orientation — download ApplyOS for free.",
-    "button": "App Store"
+    "title": "Ready for what's next?",
+    "sub": "Whether job search or career orientation — grab your early-access spot now.",
+    "btn": "Join the waitlist",
+    "appStoreBtn": "Download on the App Store"
   },
   "footer": {
-    "tagline": "Your AI Career Agent. Proactive. Personal. Free.",
-    "legal": "Legal",
+    "tagline": "Your AI career agent. Proactive. Personal. Free.",
     "product": "Product",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "imprint": "Imprint",
-    "cookies": "Cookie Policy",
-    "features": "Features",
-    "howItWorks": "How it works",
-    "faq": "FAQ",
+    "legal": "Legal",
+    "links": {
+      "features": "Features",
+      "how": "How it works",
+      "faq": "FAQ",
+      "waitlist": "Early Access",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "imprint": "Imprint",
+      "cookies": "Cookies"
+    },
     "copyright": "© 2026 ApplyOS. All rights reserved."
   }
 }

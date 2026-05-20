@@ -5,11 +5,13 @@ import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { ENABLE_APP_STORE_CTA, APP_STORE_URL } from "@/lib/config";
+import { cn } from "@/lib/utils";
 
-/** Navigation link items mapped to section IDs */
 const navLinks = [
   { key: "features" as const, href: "#features" },
   { key: "why" as const, href: "#why" },
+  { key: "how" as const, href: "#how-it-works" },
   { key: "faq" as const, href: "#faq" },
 ];
 
@@ -17,24 +19,34 @@ export function Navbar() {
   const t = useTranslations("nav");
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const ctaHref = ENABLE_APP_STORE_CTA ? APP_STORE_URL : "#waitlist";
+  const ctaLabel = t("download");
+  const ctaProps = ENABLE_APP_STORE_CTA
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {};
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-bg/95 backdrop-blur-xl border-b border-white/[0.08]">
-      <nav className="mx-auto max-w-6xl flex items-center justify-between px-4 sm:px-6 h-16">
-        {/* Logo */}
+    <header className="fixed top-0 left-0 right-0 z-50 bg-e-bg/[0.88] backdrop-blur-xl border-b border-[var(--line)]">
+      <nav className="mx-auto max-w-[1180px] flex items-center justify-between px-4 sm:px-6 lg:px-10 h-[60px] lg:h-16">
         <a href="#" className="flex items-center gap-2.5 shrink-0">
-          <Image src="/appi-logo.png" alt="Appi" width={28} height={28} className="rounded-lg" />
-          <span className="text-base font-bold tracking-tight text-white">
+          <Image
+            src="/appi-logo.png"
+            alt="Appi"
+            width={28}
+            height={28}
+            className="rounded-md"
+          />
+          <span className="text-base font-serif italic font-semibold tracking-[-0.01em] text-e-text">
             ApplyOS
           </span>
         </a>
 
-        {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map(({ key, href }) => (
             <li key={key}>
               <a
                 href={href}
-                className="text-sm text-ink-muted hover:text-white transition-colors"
+                className="text-[13px] text-e-text-2 hover:text-e-text transition-colors"
               >
                 {t(key)}
               </a>
@@ -42,26 +54,21 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop right side: language switcher + CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <LanguageSwitcher size="sm" />
-
-          {/* CTA */}
           <a
-            href="https://apps.apple.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-brand-teal-dark hover:bg-brand-teal-dark/90 text-white px-4 py-1.5 rounded-md text-sm font-semibold transition-colors"
+            href={ctaHref}
+            {...ctaProps}
+            className="bg-e-accent text-e-bg px-4 py-2 rounded-full text-[13px] font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-e-accent focus-visible:ring-offset-2 focus-visible:ring-offset-e-bg"
           >
-            {t("download")}
+            {ctaLabel}
           </a>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 text-ink-muted hover:text-white transition-colors"
+          className="lg:hidden p-2 text-e-text-2 hover:text-e-text transition-colors"
           aria-label={mobileOpen ? t("menuClose") : t("menuOpen")}
           aria-expanded={mobileOpen}
         >
@@ -69,34 +76,37 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile slide-down panel */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-white/[0.06] bg-brand-bg/98 backdrop-blur-xl">
-          <div className="px-4 py-4 flex flex-col gap-4">
+        <div className="lg:hidden border-t border-[var(--line)] bg-e-bg/95 backdrop-blur-xl">
+          <div className="px-4 sm:px-6 py-5 flex flex-col gap-4">
             {navLinks.map(({ key, href }) => (
               <a
                 key={key}
                 href={href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm text-ink-muted hover:text-white transition-colors py-1"
+                className="text-sm text-e-text-2 hover:text-e-text transition-colors py-1"
               >
                 {t(key)}
               </a>
             ))}
 
-            <div className="pt-2 border-t border-white/[0.06]">
-              <LanguageSwitcher size="sm" className="gap-2" onNavigate={() => setMobileOpen(false)} />
+            <div className="pt-3 border-t border-[var(--line)]">
+              <LanguageSwitcher
+                size="sm"
+                className="gap-2"
+                onNavigate={() => setMobileOpen(false)}
+              />
             </div>
 
-            {/* Mobile CTA */}
             <a
-              href="https://apps.apple.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={ctaHref}
+              {...ctaProps}
               onClick={() => setMobileOpen(false)}
-              className="bg-brand-teal-dark hover:bg-brand-teal-dark/90 text-white px-4 py-2 rounded-md text-sm font-semibold text-center transition-colors"
+              className={cn(
+                "bg-e-accent text-e-bg px-4 py-2.5 rounded-full text-sm font-semibold text-center transition-opacity hover:opacity-90",
+              )}
             >
-              {t("download")}
+              {ctaLabel}
             </a>
           </div>
         </div>

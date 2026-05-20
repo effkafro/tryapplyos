@@ -1,38 +1,39 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
-import { SectionHeader } from "@/components/ui/section-header";
-
-export function Faq() {
-  const t = useTranslations("faq");
+export async function Faq() {
+  const t = await getTranslations("faq");
 
   return (
-    <section id="faq" className="bg-brand-bg py-20">
-      <div className="mx-auto max-w-2xl px-6">
-        <SectionHeader label={t("label")} title={t("title")} />
-
-        <Accordion defaultValue={[0]}>
+    <section id="faq" className="bg-e-paper py-24 lg:py-[100px] px-6 sm:px-10">
+      <div className="mx-auto max-w-[920px] grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-10 lg:gap-[60px]">
+        <div>
+          <div className="text-xs text-e-accent uppercase tracking-[0.14em] font-medium mb-4">
+            — {t("eyebrow")}
+          </div>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] tracking-[-0.03em] font-normal m-0 leading-[1.05] lg:leading-none md:sticky md:top-24">
+            <span className="italic">{t("title")}</span>
+          </h2>
+        </div>
+        <div>
           {[0, 1, 2, 3, 4].map((i) => (
-            <AccordionItem
+            <div
               key={i}
-              value={i}
-              className="rounded-xl border border-white/[0.08] bg-white/[0.04] px-5 not-last:mb-3 [&:not(:last-child)]:border-b"
+              className={`border-t border-[var(--line)] py-6 ${
+                i === 4 ? "border-b" : ""
+              }`}
             >
-              <AccordionTrigger className="py-4 text-sm font-medium hover:no-underline">
-                {t(`items.${i}.question`)}
-              </AccordionTrigger>
-              <AccordionContent className="text-sm leading-relaxed text-ink-muted">
-                {t(`items.${i}.answer`)}
-              </AccordionContent>
-            </AccordionItem>
+              <div className="text-[11px] font-serif italic text-e-accent mb-2">
+                Q. {String(i + 1).padStart(2, "0")}
+              </div>
+              <div className="font-serif text-lg font-normal mb-2.5 tracking-[-0.01em] text-e-text">
+                {t(`items.${i}.q`)}
+              </div>
+              <p className="text-sm text-e-text-2 leading-[1.65] m-0">
+                {t(`items.${i}.a`)}
+              </p>
+            </div>
           ))}
-        </Accordion>
+        </div>
       </div>
     </section>
   );
