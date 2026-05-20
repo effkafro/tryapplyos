@@ -127,8 +127,8 @@
     "consentRequired": "Please accept the privacy terms.",
     "legal": "By signing up you accept our privacy terms. No spam.",
     "stats": [
-      { "num": "100", "label": "spots left" },
-      { "num": "0", "label": "on the waitlist" }
+      { "num": "100", "label": "Spots in the closed beta" },
+      { "num": "0", "label": "already taken" }
     ],
     "live": "Live",
     "perks": {

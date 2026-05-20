@@ -127,8 +127,8 @@
     "consentRequired": "Bitte stimme den Datenschutzbestimmungen zu.",
     "legal": "Mit Anmeldung akzeptierst du die Datenschutzbestimmungen. Kein Spam.",
     "stats": [
-      { "num": "100", "label": "freie Plätze" },
-      { "num": "0", "label": "auf der Warteliste" }
+      { "num": "100", "label": "Plätze in der Closed Beta" },
+      { "num": "0", "label": "davon vergeben" }
     ],
     "live": "Live",
     "perks": {
