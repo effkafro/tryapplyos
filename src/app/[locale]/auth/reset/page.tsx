@@ -26,13 +26,13 @@ export default async function AuthResetPage({ params }: { params: Promise<{ loca
           {isDE ? "Passwort zurücksetzen" : "Reset your password"}
         </h1>
 
-        <p className="mb-2 text-lg text-ink-muted">
+        <p className="mb-2 text-lg text-e-text-2">
           {isDE
             ? "Öffne diesen Link auf deinem iPhone — ApplyOS führt dich dann direkt durch das Zurücksetzen."
             : "Open this link on your iPhone — ApplyOS will guide you through the reset."}
         </p>
 
-        <p className="mt-6 text-sm text-ink-muted">
+        <p className="mt-6 text-sm text-e-text-2">
           {isDE
             ? "ApplyOS ist noch nicht installiert? Lade die App im App Store herunter und öffne den Link erneut."
             : "Don't have ApplyOS yet? Install it from the App Store and open the link again."}

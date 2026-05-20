@@ -9,7 +9,7 @@ type Props = {
 
 export function AppStoreButton({ label, variant = "hero", className }: Props) {
   const base =
-    "inline-flex items-center gap-2 bg-white font-bold text-brand-bg transition-opacity hover:opacity-90";
+    "inline-flex items-center gap-2 bg-white font-bold text-e-bg transition-opacity hover:opacity-90";
   const variants = {
     hero: "rounded-lg px-6 py-3 text-sm",
     banner: "rounded-xl px-7 py-3 text-sm",

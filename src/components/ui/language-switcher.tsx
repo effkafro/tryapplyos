@@ -22,21 +22,21 @@ export function LanguageSwitcher({ size = "sm", onNavigate, className }: Props) 
       <span
         className={
           locale === "de"
-            ? "text-white font-semibold"
-            : "text-ink-muted"
+            ? "text-e-text font-semibold"
+            : "text-e-text-2"
         }
       >
         DE
       </span>
-      <span className="text-ink-faint">|</span>
+      <span className="text-e-faint">|</span>
       <Link
         href={pathname}
         locale={otherLocale}
         onClick={onNavigate}
         className={
           locale === "en"
-            ? "text-white font-semibold"
-            : "text-ink-muted hover:text-white transition-colors"
+            ? "text-e-text font-semibold"
+            : "text-e-text-2 hover:text-e-text transition-colors"
         }
       >
         EN

@@ -17,10 +17,10 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
       <Navbar />
       <main className="mx-auto max-w-3xl px-6 pt-32 pb-20">
         <h1 className="mb-8 text-3xl font-bold">{isDE ? "Datenschutzerklärung" : "Privacy Policy"}</h1>
-        <div className="space-y-6 text-sm leading-relaxed text-ink-muted">
+        <div className="space-y-6 text-sm leading-relaxed text-e-text-2">
           <p>{isDE ? "Stand: März 2026" : "Last updated: March 2026"}</p>
 
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "1. Verantwortlicher" : "1. Controller"}
           </h2>
           <p className="whitespace-pre-line">
@@ -29,7 +29,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
               : "[Your Name / Company Name]\n[Address]\n[Email]\n\nHereinafter referred to as \"we\" or \"provider\"."}
           </p>
 
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "2. Erhebung und Verarbeitung personenbezogener Daten" : "2. Collection and Processing of Personal Data"}
           </h2>
           <p>
@@ -38,7 +38,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
               : "We only process personal data insofar as it is necessary for providing the app and this website. Processing is based on Art. 6(1) GDPR."}
           </p>
 
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "3. Datenverarbeitung in der App" : "3. Data Processing in the App"}
           </h2>
           <p>
@@ -52,7 +52,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
             <li>{isDE ? "Generierte Dokumente (Lebensläufe, Anschreiben)" : "Generated documents (resumes, cover letters)"}</li>
           </ul>
 
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "4. Keine Weitergabe an Unternehmenskunden" : "4. No Sharing with Corporate Clients"}
           </h2>
           <p>
@@ -61,7 +61,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
               : "ApplyOS has no corporate clients. Your data is not sold or shared with employers, recruiters, or any other third parties."}
           </p>
 
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "5. Hosting und Website" : "5. Hosting and Website"}
           </h2>
           <p>
@@ -70,7 +70,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
               : "This website is hosted by Vercel Inc. When visiting the website, technical data (IP address, browser type, access time) is automatically stored in server log files."}
           </p>
 
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "6. Ihre Rechte" : "6. Your Rights"}
           </h2>
           <p>
@@ -79,7 +79,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
               : "You have the right to access, rectification, erasure, restriction of processing, data portability, and objection. For this, please contact the email address mentioned above."}
           </p>
 
-          <h2 className="text-lg font-semibold text-ink">
+          <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "7. Kontakt" : "7. Contact"}
           </h2>
           <p>
