@@ -1,14 +1,24 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Geist, Source_Serif_4 } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { getMessages, getTranslations } from "next-intl/server";
+import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
 export async function generateMetadata({
@@ -75,10 +85,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${plusJakarta.variable} antialiased dark`}>
-      <body className="min-h-dvh bg-brand-bg text-white font-sans">
+    <html
+      lang={locale}
+      className={`${geist.variable} ${sourceSerif.variable} antialiased dark`}
+    >
+      <body className="min-h-dvh bg-e-bg text-e-text font-sans">
         <NextIntlClientProvider messages={messages}>
           {children}
+          <Toaster position="top-right" theme="dark" richColors closeButton />
         </NextIntlClientProvider>
       </body>
     </html>
