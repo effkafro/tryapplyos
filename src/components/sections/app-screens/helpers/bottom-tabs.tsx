@@ -1,3 +1,6 @@
+import { Kanban, Menu, RadioTower, User } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
 type TabId = "profil" | "radar" | "pipeline" | "menu";
 
 type Props = {
@@ -6,14 +9,14 @@ type Props = {
 };
 
 type ItemProps = {
-  icon: string;
+  Icon: LucideIcon;
   label: string;
   id: TabId;
   active: TabId;
   badge?: number;
 };
 
-function Item({ icon, label, id, active, badge }: ItemProps) {
+function Item({ Icon, label, id, active, badge }: ItemProps) {
   const isActive = id === active;
   return (
     <div
@@ -22,11 +25,11 @@ function Item({ icon, label, id, active, badge }: ItemProps) {
       }`}
     >
       <span
-        className={`text-xs relative ${
+        className={`relative flex items-center justify-center ${
           isActive ? "text-app-teal" : "text-app-text-2"
         }`}
       >
-        {icon}
+        <Icon className="size-3.5" strokeWidth={2} aria-hidden />
         {badge ? (
           <span className="absolute -top-1 -right-2 w-[11px] h-[11px] rounded-full bg-[#d44] text-white text-[7px] font-bold flex items-center justify-center">
             {badge}
@@ -47,10 +50,16 @@ function Item({ icon, label, id, active, badge }: ItemProps) {
 export function BottomTabs({ active = "pipeline", pipelineBadge = 0 }: Props) {
   return (
     <div className="absolute bottom-3 left-3.5 right-3.5 bg-app-card rounded-full p-1 shadow-[0_2px_14px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.04)] flex justify-around items-center">
-      <Item icon="👤" label="Profil" id="profil" active={active} />
-      <Item icon="📡" label="Radar" id="radar" active={active} />
-      <Item icon="📋" label="Pipeline" id="pipeline" active={active} badge={pipelineBadge} />
-      <Item icon="☰" label="Menü" id="menu" active={active} />
+      <Item Icon={User} label="Profil" id="profil" active={active} />
+      <Item Icon={RadioTower} label="Radar" id="radar" active={active} />
+      <Item
+        Icon={Kanban}
+        label="Pipeline"
+        id="pipeline"
+        active={active}
+        badge={pipelineBadge}
+      />
+      <Item Icon={Menu} label="Menü" id="menu" active={active} />
     </div>
   );
 }
