@@ -8,26 +8,13 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { formatWaitlistNumber } from "@/lib/format";
+import { joinWaitlist } from "@/app/actions/waitlist";
 import { PhoneFrame } from "./app-screens/phone-frame";
 import { ScreenWaitlistConfirm } from "./app-screens/screen-waitlist-confirm";
 
 type Props = {
   initialCount?: number;
 };
-
-const STORAGE_KEY = "applyOS_waitlist_count";
-
-function readStoredCount(fallback: number): number {
-  if (typeof window === "undefined") return fallback;
-  try {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (!stored) return fallback;
-    const n = parseInt(stored, 10);
-    return Number.isNaN(n) ? fallback : n;
-  } catch {
-    return fallback;
-  }
-}
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -41,8 +28,7 @@ type FormValues = z.infer<typeof formSchema>;
 export function Waitlist({ initialCount = 28 }: Props) {
   const t = useTranslations("waitlist");
   const locale = useLocale();
-  // Phase D: localStorage-Mock als Initial-State. Phase E ersetzt durch Server Action.
-  const [count, setCount] = useState(() => readStoredCount(initialCount));
+  const [count, setCount] = useState(initialCount);
   const [submitted, setSubmitted] = useState(false);
   const [shake, setShake] = useState(false);
 
@@ -52,21 +38,38 @@ export function Waitlist({ initialCount = 28 }: Props) {
     formState: { isSubmitting },
   } = useForm<FormValues>({ resolver: zodResolver(formSchema) });
 
-  const onValid = () => {
-    const next = count + 1;
-    setCount(next);
-    setSubmitted(true);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, String(next));
-    } catch {
-      /* ignore */
+  const triggerShake = () => {
+    setShake(true);
+    setTimeout(() => setShake(false), 400);
+  };
+
+  const onValid = async (data: FormValues) => {
+    const result = await joinWaitlist({
+      email: data.email,
+      locale: locale === "en" ? "en" : "de",
+      _hp: data._hp,
+    });
+    if (result.ok) {
+      setCount(result.count);
+      setSubmitted(true);
+      toast.success(t("toastSuccess"));
+      return;
     }
-    toast.success(t("toastSuccess"));
+    if (result.error === "duplicate") {
+      setSubmitted(true);
+      toast.info(t("toastDuplicate"));
+      return;
+    }
+    if (result.error === "spam") {
+      // silent drop
+      return;
+    }
+    triggerShake();
+    toast.error(t("toastError"));
   };
 
   const onInvalid = () => {
-    setShake(true);
-    setTimeout(() => setShake(false), 400);
+    triggerShake();
   };
 
   const formatted = (n: number) => formatWaitlistNumber(n, locale);

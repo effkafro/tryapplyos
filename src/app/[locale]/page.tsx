@@ -8,10 +8,14 @@ import { HowItWorks } from "@/components/sections/how-it-works";
 import { Waitlist } from "@/components/sections/waitlist";
 import { Faq } from "@/components/sections/faq";
 import { CtaBanner } from "@/components/sections/cta-banner";
+import { getWaitlistCount } from "@/app/actions/waitlist";
+
+// Fallback wenn Supabase nicht konfiguriert ist
+const FALLBACK_INITIAL_COUNT = 28;
 
 export default async function Home() {
-  // Phase E ersetzt 28 durch await getWaitlistCount() aus der Supabase-RPC.
-  const initialCount = 28;
+  const count = await getWaitlistCount();
+  const initialCount = count > 0 ? count : FALLBACK_INITIAL_COUNT;
 
   return (
     <>
