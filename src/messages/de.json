@@ -120,6 +120,11 @@
     "submit": "Platz sichern",
     "submittedLabel": "Eingetragen ✓",
     "successMessage": "Du bist dabei — Platz {position}.",
+    "alreadyRegisteredMessage": "Diese E-Mail ist bereits auf der Warteliste.",
+    "consentLabelPrefix": "Ich akzeptiere die ",
+    "consentLink": "Datenschutzbestimmungen",
+    "consentLabelSuffix": " und erlaube ApplyOS, mich per E-Mail über den Beta-Start zu informieren. Widerruf jederzeit möglich.",
+    "consentRequired": "Bitte stimme den Datenschutzbestimmungen zu.",
     "legal": "Mit Anmeldung akzeptierst du die Datenschutzbestimmungen. Kein Spam.",
     "stats": [
       { "num": "100", "label": "freie Plätze" },

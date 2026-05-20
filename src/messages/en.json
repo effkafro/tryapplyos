@@ -120,6 +120,11 @@
     "submit": "Secure my spot",
     "submittedLabel": "Confirmed ✓",
     "successMessage": "You're on the list — spot #{position}.",
+    "alreadyRegisteredMessage": "This email is already on the waitlist.",
+    "consentLabelPrefix": "I accept the ",
+    "consentLink": "privacy policy",
+    "consentLabelSuffix": " and allow ApplyOS to contact me by email about the beta launch. I can withdraw consent at any time.",
+    "consentRequired": "Please accept the privacy terms.",
     "legal": "By signing up you accept our privacy terms. No spam.",
     "stats": [
       { "num": "100", "label": "spots left" },

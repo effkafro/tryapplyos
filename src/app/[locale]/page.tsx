@@ -10,12 +10,9 @@ import { Faq } from "@/components/sections/faq";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { getWaitlistCount } from "@/app/actions/waitlist";
 
-// Fallback wenn Supabase nicht konfiguriert ist
-const FALLBACK_INITIAL_COUNT = 28;
-
 export default async function Home() {
-  const count = await getWaitlistCount();
-  const initialCount = count > 0 ? count : FALLBACK_INITIAL_COUNT;
+  // Roher DB-Count. Waitlist-Component addiert WAITLIST_BASE_COUNT für die Anzeige.
+  const initialCount = await getWaitlistCount();
 
   return (
     <>
