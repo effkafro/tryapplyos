@@ -88,8 +88,9 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       className={`${geist.variable} ${sourceSerif.variable} antialiased dark`}
+      suppressHydrationWarning
     >
-      <body className="min-h-dvh bg-e-bg text-e-text font-sans">
+      <body className="min-h-dvh bg-e-bg text-e-text font-sans" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           {children}
           <Toaster position="top-right" theme="dark" richColors closeButton />
