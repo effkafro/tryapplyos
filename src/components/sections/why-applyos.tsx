@@ -1,86 +1,55 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
-import { ArrowDown } from "lucide-react";
-import { SectionHeader } from "@/components/ui/section-header";
-
-export function WhyApplyOS() {
-  const t = useTranslations("why");
+export async function WhyApplyOS() {
+  const t = await getTranslations("why");
 
   return (
-    <section
-      id="why"
-      className="bg-gradient-to-b from-brand-bg to-[#131a30] py-20"
-    >
-      <div className="mx-auto max-w-2xl px-6">
-        <SectionHeader
-          label={t("label")}
-          title={t("title")}
-          className="mb-10"
-          labelClassName="text-[#f59e0b]"
-        />
-
-        {/* Problem */}
-        <div className="rounded-2xl border border-red-500/15 bg-red-500/[0.06] p-6">
-          <div className="mb-3 flex items-center gap-2">
-            <div className="h-2 w-2 rounded-full bg-red-500" />
-            <span className="text-sm font-semibold text-red-300">
-              {t("problem.label")}
-            </span>
+    <section id="why" className="py-24 lg:py-[100px] px-6 sm:px-10">
+      <div className="mx-auto max-w-[880px]">
+        <div className="text-center mb-14">
+          <div className="text-xs text-e-accent uppercase tracking-[0.14em] font-medium mb-4">
+            — {t("eyebrow")} —
           </div>
-          <p className="text-sm leading-relaxed text-ink-muted">
-            {t.rich("problem.text", {
-              highlight: (chunks) => (
-                <span className="font-semibold text-red-300">{chunks}</span>
-              ),
-            })}
-          </p>
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] tracking-[-0.035em] font-normal m-0 leading-[1.05] lg:leading-none">
+            <span className="italic">{t("title")}</span>
+          </h2>
         </div>
 
-        {/* Arrow */}
-        <div className="flex justify-center py-3">
-          <ArrowDown className="h-5 w-5 text-white/15" />
+        <div className="grid grid-cols-1 md:grid-cols-2 border border-[var(--line)] rounded-2xl overflow-hidden">
+          <div className="p-7 md:p-8 bg-e-bg/85 md:border-r border-b md:border-b-0 border-[var(--line)]">
+            <div className="text-[11px] text-e-problem uppercase tracking-[0.14em] mb-3.5">
+              — {t("problem.label")}
+            </div>
+            <p className="font-serif text-[15px] text-e-dim leading-[1.65] m-0">
+              {t("problem.text")}
+            </p>
+          </div>
+          <div className="p-7 md:p-8 bg-e-paper">
+            <div className="text-[11px] text-e-accent uppercase tracking-[0.14em] mb-3.5">
+              — {t("solution.label")}
+            </div>
+            <p className="font-serif text-[15px] text-e-text leading-[1.65] m-0">
+              {t("solution.text")}
+            </p>
+          </div>
         </div>
 
-        {/* Solution */}
-        <div className="rounded-2xl border border-brand-teal/20 bg-gradient-to-br from-brand-teal-dark/12 to-brand-teal/[0.06] p-6">
-          <div className="mb-3 flex items-center gap-2">
-            <div className="h-2 w-2 rounded-full bg-brand-teal" />
-            <span className="text-sm font-semibold text-brand-teal">
-              {t("solution.label")}
-            </span>
-          </div>
-          <p className="text-sm leading-relaxed text-ink">
-            {t.rich("solution.text", {
-              highlight: (chunks) => (
-                <span className="font-semibold text-brand-teal">{chunks}</span>
-              ),
-            })}
-          </p>
-
-          {/* Stats */}
-          <div className="mt-5 flex gap-6">
-            <div className="flex-1 text-center">
-              <div className="text-xl font-extrabold text-brand-teal">100%</div>
-              <div className="mt-1 text-xs text-ink-dim">
-                {t("stats.userFocused")}
+        <div className="grid grid-cols-3 border border-[var(--line)] rounded-2xl overflow-hidden mt-4">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className={`bg-e-bg px-3 py-7 md:px-6 md:py-8 text-center ${
+                i < 2 ? "border-r border-[var(--line)]" : ""
+              }`}
+            >
+              <div className="font-serif italic text-2xl md:text-[44px] text-e-accent tracking-[-0.02em] leading-none">
+                {t(`stats.${i}.num`)}
+              </div>
+              <div className="text-[10px] md:text-xs text-e-dim mt-2 uppercase tracking-[0.12em]">
+                {t(`stats.${i}.label`)}
               </div>
             </div>
-            <div className="flex-1 text-center">
-              <div className="text-xl font-extrabold text-brand-teal">0</div>
-              <div className="mt-1 text-xs text-ink-dim">
-                {t("stats.noCorpClients")}
-              </div>
-            </div>
-            <div className="flex-1 text-center">
-              <div className="text-xl font-extrabold text-brand-teal">
-                &darr;
-              </div>
-              <div className="mt-1 text-xs text-ink-dim">
-                {t("stats.lessEffort")}
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,76 +1,146 @@
-"use client";
+import { getTranslations } from "next-intl/server";
+import { PhoneFrame } from "./app-screens/phone-frame";
+import { ScreenPipeline } from "./app-screens/screen-pipeline";
+import { ScreenJobDetail } from "./app-screens/screen-job-detail";
+import { ScreenResultImage } from "./app-screens/screen-result-image";
+import { ScreenStudentResult } from "./app-screens/screen-student-result";
 
-import { useTranslations } from "next-intl";
-import { Check } from "lucide-react";
-import { SectionHeader } from "@/components/ui/section-header";
+type CardData = {
+  accent: string;
+  title: string;
+  sub: string;
+  points: string[];
+};
 
-const groups = [
-  {
-    key: "jobSeekers",
-    accentColor: "text-brand-teal",
-    mockupBg:
-      "from-brand-teal-dark/20 to-brand-teal/[0.08] border-brand-teal/20",
-  },
-  {
-    key: "students",
-    accentColor: "text-brand-indigo-light",
-    mockupBg:
-      "from-brand-indigo/20 to-brand-purple/[0.08] border-brand-indigo-light/20",
-  },
+const CARD_SCREENS = [
+  // Card 1 — Jobsuchende
+  () => [<ScreenPipeline key="p" />, <ScreenJobDetail key="d" />],
+  // Card 2 — Schüler
+  () => [<ScreenResultImage key="r" />, <ScreenStudentResult key="s" />],
 ] as const;
 
-export function TargetGroups() {
-  const t = useTranslations("targetGroups");
+export async function TargetGroups() {
+  const t = await getTranslations("groups");
+
+  // Lade die beiden Cards aus i18n als typisierte Objekte (next-intl raw)
+  const cards: CardData[] = [
+    {
+      accent: t("cards.0.accent"),
+      title: t("cards.0.title"),
+      sub: t("cards.0.sub"),
+      points: [0, 1, 2, 3, 4].map((j) => t(`cards.0.points.${j}`)),
+    },
+    {
+      accent: t("cards.1.accent"),
+      title: t("cards.1.title"),
+      sub: t("cards.1.sub"),
+      points: [0, 1, 2, 3, 4].map((j) => t(`cards.1.points.${j}`)),
+    },
+  ];
+
+  const [titleHead, titleTailWithDot] = splitOnLastDot(t("title"));
 
   return (
-    <section className="bg-brand-bg py-20">
-      <div className="mx-auto max-w-5xl px-6">
-        <SectionHeader label={t("label")} title={t("title")} />
+    <section className="bg-e-paper py-24 lg:py-[100px] px-6 sm:px-10">
+      <div className="mx-auto max-w-[1180px]">
+        <div className="text-center mb-12 lg:mb-14">
+          <div className="text-xs text-e-accent uppercase tracking-[0.14em] font-medium mb-4">
+            — {t("eyebrow")} —
+          </div>
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] tracking-[-0.035em] font-normal m-0 leading-[1.05] lg:leading-none">
+            {titleHead}. <span className="italic">{titleTailWithDot}</span>
+          </h2>
+        </div>
 
-        <div className="mx-auto flex max-w-3xl flex-col gap-6">
-          {groups.map(({ key, accentColor, mockupBg }) => (
-            <div
-              key={key}
-              className="flex flex-col gap-6 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 sm:flex-row sm:items-start"
-            >
-              {/* Mockup placeholder */}
+        <div className="flex flex-col gap-6">
+          {cards.map((card, i) => {
+            const reverse = i % 2 === 1;
+            const phones = CARD_SCREENS[i]();
+            const accentRgba =
+              card.accent === "teal"
+                ? "rgba(58,171,131,0.08)"
+                : "rgba(201,165,135,0.08)";
+            const accentColor =
+              card.accent === "teal"
+                ? "var(--color-e-accent)"
+                : "var(--color-e-accent-2)";
+
+            return (
               <div
-                className={`flex h-32 w-full flex-shrink-0 items-center justify-center rounded-xl border bg-gradient-to-br sm:h-40 sm:w-28 ${mockupBg}`}
+                key={i}
+                className="border border-[var(--line)] rounded-3xl overflow-hidden bg-[#221f1b] lg:min-h-[480px]"
               >
-                <span className="text-center text-xs text-white/25">
-                  Screen
-                  <br />
-                  Mockup
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1">
-                <h3 className={`text-lg font-bold ${accentColor}`}>
-                  {t(`${key}.title`)}
-                </h3>
-                <p className="mt-1 text-sm text-ink-muted">
-                  {t(`${key}.subtitle`)}
-                </p>
-
-                <ul className="mt-4 space-y-2">
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-2 text-sm text-ink"
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr]">
+                  {/* Phone column */}
+                  <div
+                    className={`relative flex items-center justify-center p-8 lg:p-10 gap-4 ${
+                      reverse ? "lg:order-2" : "lg:order-1"
+                    }`}
+                    style={{
+                      backgroundImage: `radial-gradient(ellipse at center, ${accentRgba}, transparent 70%)`,
+                    }}
+                  >
+                    <div
+                      className="opacity-80"
+                      style={{ transform: "rotate(-4deg) translateY(12px)" }}
                     >
-                      <Check
-                        className={`mt-0.5 h-4 w-4 flex-shrink-0 ${accentColor}`}
-                      />
-                      <span>{t(`${key}.benefits.${i}`)}</span>
-                    </li>
-                  ))}
-                </ul>
+                      <PhoneFrame scale={0.7}>{phones[0]}</PhoneFrame>
+                    </div>
+                    <div
+                      className="z-[2]"
+                      style={{ transform: "rotate(3deg) translateY(-12px)" }}
+                    >
+                      <PhoneFrame scale={0.78}>{phones[1]}</PhoneFrame>
+                    </div>
+                  </div>
+
+                  {/* Content column */}
+                  <div
+                    className={`p-8 lg:p-10 flex flex-col justify-center ${
+                      reverse ? "lg:order-1" : "lg:order-2"
+                    }`}
+                  >
+                    <h3 className="font-serif text-3xl lg:text-4xl font-normal m-0 tracking-[-0.025em] leading-[1.05]">
+                      {card.title}
+                    </h3>
+                    <p className="text-[13px] text-e-dim mt-2 uppercase tracking-[0.12em] m-0">
+                      {card.sub}
+                    </p>
+                    <div className="h-px bg-[var(--line)] mt-6" />
+                    <ul className="list-none p-0 m-0">
+                      {card.points.map((point, j) => (
+                        <li
+                          key={j}
+                          className={`flex gap-3 py-3 text-sm text-e-text-2 leading-[1.5] ${
+                            j < card.points.length - 1
+                              ? "border-b border-[var(--line)]"
+                              : ""
+                          }`}
+                        >
+                          <span
+                            className="font-serif italic text-xs pt-[3px]"
+                            style={{ color: accentColor }}
+                          >
+                            {String(j + 1).padStart(2, "0")}
+                          </span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
+}
+
+function splitOnLastDot(s: string): [string, string] {
+  // "Zwei Wege. Ein Ziel." → ["Zwei Wege", "Ein Ziel."]
+  const parts = s.split(". ");
+  if (parts.length < 2) return [s, ""];
+  return [parts[0], parts.slice(1).join(". ")];
 }

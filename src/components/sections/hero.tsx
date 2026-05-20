@@ -1,44 +1,76 @@
-"use client";
+import { getTranslations } from "next-intl/server";
+import { Sparkles } from "lucide-react";
+import { PhoneFrame } from "./app-screens/phone-frame";
+import { ScreenRadar } from "./app-screens/screen-radar";
+import { ScreenJobDetail } from "./app-screens/screen-job-detail";
 
-import { useTranslations } from "next-intl";
-
-import { AppStoreButton } from "@/components/ui/app-store-button";
-
-export function Hero() {
-  const t = useTranslations("hero");
+export async function Hero() {
+  const t = await getTranslations("hero");
+  const titleLine1 = t("title.0");
+  const titleLine2 = t("title.1");
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-teal-dark to-brand-indigo-deep pt-32 pb-20 text-center">
-      {/* Decorative radial glows */}
-      <div className="pointer-events-none absolute -top-40 -right-40 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(45,212,191,0.15),transparent)]" />
-      <div className="pointer-events-none absolute -bottom-60 -left-30 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.12),transparent)]" />
+    <section className="relative overflow-hidden pt-24 pb-16 px-6 sm:px-10 lg:pt-[110px] lg:pb-20">
+      {/* Background glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[radial-gradient(ellipse,rgba(58,171,131,0.15),transparent_60%)]"
+      />
 
-      <div className="relative z-10 mx-auto max-w-2xl px-6">
-        {/* Badge */}
-        <span className="mb-6 inline-block rounded-full border border-brand-teal/30 bg-brand-teal/15 px-4 py-1.5 text-sm font-semibold text-brand-teal">
-          {t("badge")}
-        </span>
+      <div className="relative mx-auto max-w-[1180px] grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+        <div>
+          {/* Editorial kicker */}
+          <div className="inline-flex items-center gap-3 mb-7 lg:mb-8">
+            <span className="w-0.5 h-4 bg-e-accent" />
+            <span className="text-[11px] uppercase tracking-[0.22em] font-medium text-e-text-2">
+              {t("eyebrow")}
+            </span>
+          </div>
 
-        {/* Headline */}
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-          {t("title1")}
-          <br />
-          <span className="text-brand-teal">{t("title2")}</span>
-        </h1>
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-[72px] leading-[1.05] lg:leading-[0.98] tracking-[-0.04em] font-normal m-0">
+            {titleLine1}
+            <br />
+            <span className="italic text-e-accent">{titleLine2}</span>
+          </h1>
 
-        {/* Subtitle */}
-        <p className="mx-auto mt-6 max-w-lg text-lg text-ink-muted">
-          {t("subtitle")}
-        </p>
+          <p className="text-base sm:text-lg text-e-text-2 leading-[1.55] max-w-[500px] mt-6 lg:mt-7">
+            {t("subtitle")}
+          </p>
 
-        {/* CTA */}
-        <div className="mt-8">
-          <AppStoreButton label={t("cta")} variant="hero" />
+          <div className="flex flex-wrap items-center gap-5 mt-8 lg:mt-9">
+            <a
+              href="#waitlist"
+              className="inline-flex items-center gap-2.5 bg-e-accent text-e-bg px-6 py-3.5 rounded-full text-sm font-semibold transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-e-accent focus-visible:ring-offset-2 focus-visible:ring-offset-e-bg"
+            >
+              <Sparkles className="size-4" aria-hidden />
+              {t("cta")}
+            </a>
+            <span className="text-xs text-e-faint">{t("meta")}</span>
+          </div>
         </div>
 
-        {/* Phone mockup placeholder */}
-        <div className="mx-auto mt-12 flex h-[400px] w-[200px] items-center justify-center rounded-[2rem] border border-white/15 bg-white/[0.08]">
-          <span className="text-sm text-white/30">{t("screenshotAlt")}</span>
+        {/* Phone stack — desktop only */}
+        <div className="relative h-[600px] hidden lg:flex justify-center items-center">
+          <div
+            className="absolute opacity-55 blur-[0.4px]"
+            style={{ left: -10, top: 80, transform: "rotate(-6deg)" }}
+          >
+            <PhoneFrame scale={0.78}>
+              <ScreenJobDetail />
+            </PhoneFrame>
+          </div>
+          <div className="relative z-[2]">
+            <PhoneFrame>
+              <ScreenRadar />
+            </PhoneFrame>
+          </div>
+        </div>
+
+        {/* Mobile phone (single, centered, smaller) */}
+        <div className="flex justify-center lg:hidden mt-4">
+          <PhoneFrame scale={0.7}>
+            <ScreenRadar />
+          </PhoneFrame>
         </div>
       </div>
     </section>
