@@ -7,9 +7,16 @@ import Image from "next/image";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { ENABLE_APP_STORE_CTA, APP_STORE_URL } from "@/lib/config";
 import { cn } from "@/lib/utils";
+import { Link } from "@/i18n/navigation";
 
-const navLinks = [
-  { key: "features" as const, href: "#features" },
+// Audience-Pages: führen auf eigene Sub-Routes (locale-aware Link)
+const audienceLinks = [
+  { key: "forJobseekers" as const, href: "/fuer-jobsuchende" as const },
+  { key: "forStudents" as const, href: "/fuer-schueler" as const },
+];
+
+// Anker-Links auf der aktuellen Page (funktionieren primär auf /)
+const anchorLinks = [
   { key: "why" as const, href: "#why" },
   { key: "how" as const, href: "#how-it-works" },
   { key: "faq" as const, href: "#faq" },
@@ -28,7 +35,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-e-bg/[0.88] backdrop-blur-xl border-b border-[var(--line)]">
       <nav className="mx-auto max-w-[1180px] flex items-center justify-between px-4 sm:px-6 lg:px-10 h-[60px] lg:h-16">
-        <a href="#" className="flex items-center gap-2.5 shrink-0">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
             src="/appi-logo.png"
             alt="Appi"
@@ -39,10 +46,21 @@ export function Navbar() {
           <span className="text-base font-serif italic font-semibold tracking-[-0.01em] text-e-text">
             ApplyOS
           </span>
-        </a>
+        </Link>
 
-        <ul className="hidden lg:flex items-center gap-8">
-          {navLinks.map(({ key, href }) => (
+        <ul className="hidden lg:flex items-center gap-7">
+          {audienceLinks.map(({ key, href }) => (
+            <li key={key}>
+              <Link
+                href={href}
+                className="text-[13px] font-semibold text-e-text hover:text-e-accent transition-colors"
+              >
+                {t(key)}
+              </Link>
+            </li>
+          ))}
+          <li aria-hidden className="h-3 w-px bg-[var(--line)]" />
+          {anchorLinks.map(({ key, href }) => (
             <li key={key}>
               <a
                 href={href}
@@ -79,7 +97,20 @@ export function Navbar() {
       {mobileOpen && (
         <div className="lg:hidden border-t border-[var(--line)] bg-e-bg/95 backdrop-blur-xl">
           <div className="px-4 sm:px-6 py-5 flex flex-col gap-4">
-            {navLinks.map(({ key, href }) => (
+            {audienceLinks.map(({ key, href }) => (
+              <Link
+                key={key}
+                href={href}
+                onClick={() => setMobileOpen(false)}
+                className="text-sm font-semibold text-e-text hover:text-e-accent transition-colors py-1"
+              >
+                {t(key)}
+              </Link>
+            ))}
+
+            <div className="h-px bg-[var(--line)]" aria-hidden />
+
+            {anchorLinks.map(({ key, href }) => (
               <a
                 key={key}
                 href={href}

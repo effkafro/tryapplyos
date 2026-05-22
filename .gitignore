@@ -40,6 +40,9 @@ yarn-error.log*
 # superpowers brainstorm
 .superpowers/
 
+# lokaler Scratch-Ordner (Reviews, Screenshots, Notes)
+/tmp/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

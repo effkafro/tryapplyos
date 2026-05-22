@@ -1,15 +1,19 @@
 import { getTranslations } from "next-intl/server";
+import { ArrowRight } from "lucide-react";
 import { PhoneFrame } from "./app-screens/phone-frame";
 import { ScreenPipeline } from "./app-screens/screen-pipeline";
 import { ScreenJobDetail } from "./app-screens/screen-job-detail";
 import { ScreenResultImage } from "./app-screens/screen-result-image";
 import { ScreenStudentResult } from "./app-screens/screen-student-result";
+import { Link } from "@/i18n/navigation";
 
 type CardData = {
   accent: string;
   title: string;
   sub: string;
   points: string[];
+  ctaButton: string;
+  href: "/fuer-jobsuchende" | "/fuer-schueler";
 };
 
 const CARD_SCREENS = [
@@ -19,22 +23,27 @@ const CARD_SCREENS = [
   () => [<ScreenResultImage key="r" />, <ScreenStudentResult key="s" />],
 ] as const;
 
+const CARD_HREFS = ["/fuer-jobsuchende", "/fuer-schueler"] as const;
+
 export async function TargetGroups() {
   const t = await getTranslations("groups");
 
-  // Lade die beiden Cards aus i18n als typisierte Objekte (next-intl raw)
   const cards: CardData[] = [
     {
       accent: t("cards.0.accent"),
       title: t("cards.0.title"),
       sub: t("cards.0.sub"),
       points: [0, 1, 2, 3, 4].map((j) => t(`cards.0.points.${j}`)),
+      ctaButton: t("cards.0.ctaButton"),
+      href: CARD_HREFS[0],
     },
     {
       accent: t("cards.1.accent"),
       title: t("cards.1.title"),
       sub: t("cards.1.sub"),
       points: [0, 1, 2, 3, 4].map((j) => t(`cards.1.points.${j}`)),
+      ctaButton: t("cards.1.ctaButton"),
+      href: CARD_HREFS[1],
     },
   ];
 
@@ -56,19 +65,24 @@ export async function TargetGroups() {
           {cards.map((card, i) => {
             const reverse = i % 2 === 1;
             const phones = CARD_SCREENS[i]();
-            const accentRgba =
-              card.accent === "teal"
-                ? "rgba(58,171,131,0.08)"
-                : "rgba(201,165,135,0.08)";
-            const accentColor =
-              card.accent === "teal"
-                ? "var(--color-e-accent)"
-                : "var(--color-e-accent-2)";
+            const isTeal = card.accent === "teal";
+            const accentRgba = isTeal
+              ? "rgba(58,171,131,0.08)"
+              : "rgba(201,165,135,0.08)";
+            const accentColor = isTeal
+              ? "var(--color-e-accent)"
+              : "var(--color-e-accent-2)";
 
             return (
-              <div
+              <Link
                 key={i}
-                className="border border-[var(--line)] rounded-3xl overflow-hidden bg-[#221f1b] lg:min-h-[480px]"
+                href={card.href}
+                className="group block border border-[var(--line)] rounded-3xl overflow-hidden bg-[#221f1b] lg:min-h-[480px] transition-colors duration-300 hover:border-[color:var(--hover-border)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-e-paper"
+                style={
+                  {
+                    ["--hover-border" as string]: accentColor,
+                  } as React.CSSProperties
+                }
               >
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr]">
                   {/* Phone column */}
@@ -127,9 +141,20 @@ export async function TargetGroups() {
                         </li>
                       ))}
                     </ul>
+
+                    {/* CTA pill — sichtbarer Bifurcation-Affordance-Indikator */}
+                    <div className="mt-7">
+                      <span
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-e-bg transition-transform duration-300 group-hover:translate-x-1"
+                        style={{ backgroundColor: accentColor }}
+                      >
+                        {card.ctaButton}
+                        <ArrowRight className="size-4" aria-hidden />
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

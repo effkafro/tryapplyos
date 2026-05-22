@@ -3,6 +3,14 @@
     "title": "ApplyOS — Your AI Career Agent",
     "description": "ApplyOS learns what you truly want — and finds the best jobs for you every day. Whether you're experienced or a student."
   },
+  "metaJobseeker": {
+    "title": "ApplyOS for Job Seekers — Automated AI Job Search",
+    "description": "Your AI career agent for the job hunt. Daily top matches, auto-generated application docs, a clear pipeline overview — built for you, not for companies."
+  },
+  "metaSchueler": {
+    "title": "ApplyOS for Students — Find Apprenticeship & University with Profiling",
+    "description": "Scientifically grounded personality profiling and matching apprenticeship & study suggestions. Discover what genuinely fits you — without advisory interests."
+  },
   "nav": {
     "features": "Features",
     "why": "Why",
@@ -11,7 +19,9 @@
     "faq": "FAQ",
     "download": "Join waitlist",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "menuClose": "Close menu",
+    "forJobseekers": "For job seekers",
+    "forStudents": "For students"
   },
   "hero": {
     "eyebrow": "Exclusive Early Access · Closed Beta",
@@ -20,6 +30,14 @@
     "cta": "Join the waitlist",
     "meta": "Free · Limited spots",
     "screenshotAlt": "ApplyOS App Preview"
+  },
+  "heroSchueler": {
+    "eyebrow": "Exclusive Early Access",
+    "title": ["Your path after school.", "Clarity. Personality. Plan."],
+    "subtitle": "ApplyOS figures out what genuinely fits you — and suggests matching apprenticeships and study programs. Backed by psychology.",
+    "cta": "Secure my beta spot",
+    "meta": "Free · Limited spots",
+    "screenshotAlt": "ApplyOS App Preview for students"
   },
   "features": {
     "eyebrow": "Features",
@@ -46,6 +64,31 @@
       }
     ]
   },
+  "featuresSchueler": {
+    "eyebrow": "Features",
+    "title": "The app that gets you.",
+    "sub": "Three core capabilities to map out your path after school.",
+    "items": [
+      {
+        "tag": "At the core",
+        "title": "Personality profiling",
+        "desc": "Scientifically grounded assessment instead of multiple-choice. Get to know yourself better — strengths, values, work styles.",
+        "label": "Profile"
+      },
+      {
+        "tag": "Tailor-made",
+        "title": "Apprenticeship & University",
+        "desc": "Concrete apprenticeships and study programs matching your strengths — explained clearly, no jargon.",
+        "label": "Suggestions"
+      },
+      {
+        "tag": "Step by step",
+        "title": "Orientation guidance",
+        "desc": "From first ideas to your first application — the app guides you through every decision.",
+        "label": "Plan"
+      }
+    ]
+  },
   "why": {
     "eyebrow": "Why ApplyOS",
     "title": "Because you're worth it.",
@@ -63,6 +106,23 @@
       { "num": "↓ 85%", "label": "Less effort" }
     ]
   },
+  "whySchueler": {
+    "eyebrow": "Why ApplyOS",
+    "title": "Because you're worth it.",
+    "problem": {
+      "label": "Classic career orientation",
+      "text": "Multiple-choice tests from the 90s, advisor sessions with placement incentives, second-hand parental pressure. What actually fits you? Stays undiscovered."
+    },
+    "solution": {
+      "label": "ApplyOS",
+      "text": "Built for you, not for schools or advisory firms. Real psychological profiling. Suggestions without hidden agendas. You decide what fits."
+    },
+    "stats": [
+      { "num": "100%", "label": "User-focused" },
+      { "num": "0", "label": "Advisory mandates" },
+      { "num": "↓ 85%", "label": "Less uncertainty" }
+    ]
+  },
   "groups": {
     "eyebrow": "Who ApplyOS is for",
     "title": "Two paths. One goal.",
@@ -77,7 +137,8 @@
           "CV & cover letter generated automatically",
           "Apply on the original listing — one tap",
           "Track every application in the Kanban board"
-        ]
+        ],
+        "ctaButton": "For job seekers"
       },
       {
         "accent": "indigo",
@@ -89,7 +150,8 @@
           "Matching apprenticeships & study programs",
           "From \"no idea\" to a clear plan",
           "Step-by-step guidance through every application"
-        ]
+        ],
+        "ctaButton": "For students"
       }
     ]
   },
@@ -109,6 +171,25 @@
       {
         "title": "Apply & track",
         "desc": "Generate an AI cover letter, apply on the original listing, and track everything in your Kanban board."
+      }
+    ]
+  },
+  "howSchueler": {
+    "eyebrow": "How it works",
+    "title": "Three steps to your path.",
+    "stepLabel": "Step",
+    "steps": [
+      {
+        "title": "Build your profile",
+        "desc": "A scientifically grounded personality assessment — not keywords, but real self-awareness."
+      },
+      {
+        "title": "Discover what fits",
+        "desc": "Concrete apprenticeships and study programs matching your strengths — explained clearly, no jargon."
+      },
+      {
+        "title": "Take the next step",
+        "desc": "Step-by-step guidance through every application — from cover letter to interview."
       }
     ]
   },
@@ -177,6 +258,66 @@
       {
         "q": "Is my data shared with companies?",
         "a": "No. ApplyOS has no corporate clients. Your data is yours — never sold, never shared."
+      }
+    ]
+  },
+  "faqJobseeker": {
+    "eyebrow": "FAQ",
+    "title": "Common questions.",
+    "items": [
+      {
+        "q": "How current are the listings in the app?",
+        "a": "ApplyOS sources roles directly from one of Germany's largest job databases — updated daily, with hundreds of thousands of active listings."
+      },
+      {
+        "q": "How does the AI matching work?",
+        "a": "Instead of keyword filters, ApplyOS analyzes your profile holistically — values, strengths, life stage, experience. From that, it computes a match score per role so you see at a glance how well it fits."
+      },
+      {
+        "q": "Are application docs really generated automatically?",
+        "a": "Yes. CV and cover letter are personalized per role with one tap — you don't have to start from scratch each time."
+      },
+      {
+        "q": "Can I apply directly from the app?",
+        "a": "ApplyOS hands you off to the company's original listing, where you apply directly. Privacy is preserved and you keep a direct line to the employer."
+      },
+      {
+        "q": "How is the Kanban pipeline different from Notion or LinkedIn?",
+        "a": "It's purpose-built for applications — with stages Discovered, Applied, Interview, Offer — and stays in sync with your app actions automatically. No manual upkeep, no foreign fields."
+      },
+      {
+        "q": "What happens to my CV data?",
+        "a": "Your data stays yours. ApplyOS has no corporate clients — no profile is sold, no CV passed to recruiters."
+      }
+    ]
+  },
+  "faqSchueler": {
+    "eyebrow": "FAQ",
+    "title": "Common questions.",
+    "items": [
+      {
+        "q": "Am I too young for ApplyOS?",
+        "a": "ApplyOS makes sense from age 14. If you're still in school, you go through an age-appropriate personality profiling and get suggestions for apprenticeships or study programs — no job listings."
+      },
+      {
+        "q": "How scientific is the profiling really?",
+        "a": "The profiling builds on established personality models (Big Five, RIASEC) and was developed with psychologists. No magic, no gut-feeling tests — methods validated in research for decades."
+      },
+      {
+        "q": "Does the app also help with apprenticeship applications?",
+        "a": "Yes. After profiling, ApplyOS guides you step by step through every application — from the cover letter and interview prep to tracking where you've already applied."
+      },
+      {
+        "q": "What do my parents or teachers see in the app?",
+        "a": "Nothing — unless you share it. ApplyOS is your private app. Profiling results, suggestions and applications are visible only to you."
+      },
+      {
+        "q": "Is my data shared with schools or advisors?",
+        "a": "No. ApplyOS has no institutional clients — neither schools nor career advisors get access to your data."
+      },
+      {
+        "q": "What if the app suggests an apprenticeship I don't like?",
+        "a": "Then you dismiss the suggestion and give feedback — the app learns from that and refines its picks. You always decide what fits — not the algorithm."
       }
     ]
   },

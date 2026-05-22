@@ -3,6 +3,14 @@
     "title": "ApplyOS — Dein KI-Karriere-Agent",
     "description": "ApplyOS lernt, was du wirklich willst — und findet täglich die besten Jobs für dich. Ob Berufserfahrene oder Schüler."
   },
+  "metaJobseeker": {
+    "title": "ApplyOS für Jobsuchende — automatische Jobsuche mit KI",
+    "description": "Dein KI-Karriere-Agent für die Jobsuche. Tägliche Top-Matches, automatisch erstellte Bewerbungsunterlagen, ein klarer Bewerbungs-Überblick — gebaut für dich, nicht für Unternehmen."
+  },
+  "metaSchueler": {
+    "title": "ApplyOS für Schüler — Ausbildung & Studium mit Profiling finden",
+    "description": "Wissenschaftlich fundiertes Persönlichkeitsprofiling und passende Ausbildungs- und Studienvorschläge. Finde heraus, was wirklich zu dir passt — ohne Beratungs-Interessen."
+  },
   "nav": {
     "features": "Features",
     "why": "Warum",
@@ -11,7 +19,9 @@
     "faq": "FAQ",
     "download": "Auf Warteliste",
     "menuOpen": "Menü öffnen",
-    "menuClose": "Menü schließen"
+    "menuClose": "Menü schließen",
+    "forJobseekers": "Für Jobsuchende",
+    "forStudents": "Für Schüler"
   },
   "hero": {
     "eyebrow": "Exclusive Early Access",
@@ -20,6 +30,14 @@
     "cta": "Auf Warteliste setzen",
     "meta": "Kostenlos · Limitierte Plätze",
     "screenshotAlt": "ApplyOS App Vorschau"
+  },
+  "heroSchueler": {
+    "eyebrow": "Exclusive Early Access",
+    "title": ["Dein Weg nach der Schule.", "Klarheit. Persönlichkeit. Plan."],
+    "subtitle": "ApplyOS findet heraus, was wirklich zu dir passt — und schlägt dir passende Ausbildungen und Studiengänge vor. Wissenschaftlich fundiert.",
+    "cta": "Beta-Platz sichern",
+    "meta": "Kostenlos · Limitierte Plätze",
+    "screenshotAlt": "ApplyOS App Vorschau für Schüler"
   },
   "features": {
     "eyebrow": "Features",
@@ -46,6 +64,31 @@
       }
     ]
   },
+  "featuresSchueler": {
+    "eyebrow": "Features",
+    "title": "Die App, die dich versteht.",
+    "sub": "Drei Kernfunktionen, die dir den Weg nach der Schule zeigen.",
+    "items": [
+      {
+        "tag": "Tief im Kern",
+        "title": "Persönlichkeitsprofiling",
+        "desc": "Wissenschaftlich fundiertes Assessment statt Multiple-Choice. Du lernst dich selbst besser kennen — Stärken, Werte, Arbeitsstile.",
+        "label": "Profil"
+      },
+      {
+        "tag": "Maßgeschneidert",
+        "title": "Ausbildung & Studium",
+        "desc": "Konkrete Ausbildungsplätze und Studiengänge, die zu deinen Stärken passen — verständlich erklärt, ohne Jargon.",
+        "label": "Vorschläge"
+      },
+      {
+        "tag": "Schritt für Schritt",
+        "title": "Orientierungs-Begleitung",
+        "desc": "Von ersten Ideen bis zur ersten Bewerbung — die App führt dich durch jeden Entscheidungsschritt.",
+        "label": "Plan"
+      }
+    ]
+  },
   "why": {
     "eyebrow": "Warum ApplyOS",
     "title": "Weil du es wert bist.",
@@ -63,6 +106,23 @@
       { "num": "↓ 85%", "label": "Weniger Aufwand" }
     ]
   },
+  "whySchueler": {
+    "eyebrow": "Warum ApplyOS",
+    "title": "Weil du es wert bist.",
+    "problem": {
+      "label": "Klassische Berufsorientierung",
+      "text": "Multiple-Choice-Tests aus den 90ern, Beratungsgespräche mit Vermittlungsinteresse, Eltern-Druck aus zweiter Hand. Was wirklich zu dir passt? Bleibt unentdeckt."
+    },
+    "solution": {
+      "label": "ApplyOS",
+      "text": "Gebaut für dich, nicht für Schulen oder Beratungsfirmen. Echtes psychologisches Profiling. Vorschläge ohne Hintergedanken. Du entscheidest, was zu dir passt."
+    },
+    "stats": [
+      { "num": "100%", "label": "User-fokussiert" },
+      { "num": "0", "label": "Beratungsmandate" },
+      { "num": "↓ 85%", "label": "Weniger Unsicherheit" }
+    ]
+  },
   "groups": {
     "eyebrow": "Für wen ist ApplyOS",
     "title": "Zwei Wege. Ein Ziel.",
@@ -77,7 +137,8 @@
           "Lebenslauf & Anschreiben automatisch generiert",
           "Auf die Original-Anzeige bewerben — mit einem Klick",
           "Alle Stellen übersichtlich an einem Ort tracken"
-        ]
+        ],
+        "ctaButton": "Für Jobsuchende"
       },
       {
         "accent": "indigo",
@@ -89,7 +150,8 @@
           "Passende Ausbildungsplätze & Studiengänge",
           "Von „Keine Ahnung\" zu einem klaren Plan",
           "Bewerbungsprozess Schritt für Schritt begleitet"
-        ]
+        ],
+        "ctaButton": "Für Schüler"
       }
     ]
   },
@@ -109,6 +171,25 @@
       {
         "title": "Bewerben & Tracken",
         "desc": "Lass automatisch ein personalisiertes Anschreiben und Interview-Fragen für das Bewerbungsgespräch generieren."
+      }
+    ]
+  },
+  "howSchueler": {
+    "eyebrow": "So funktioniert's",
+    "title": "In drei Schritten zu deinem Weg.",
+    "stepLabel": "Schritt",
+    "steps": [
+      {
+        "title": "Profil erstellen",
+        "desc": "Ein wissenschaftlich fundiertes Persönlichkeits-Assessment — keine Stichworte, sondern echte Selbsterkenntnis."
+      },
+      {
+        "title": "Passendes entdecken",
+        "desc": "Konkrete Ausbildungsplätze und Studiengänge, die zu deinen Stärken passen — verständlich erklärt, ohne Jargon."
+      },
+      {
+        "title": "Den nächsten Schritt machen",
+        "desc": "Schritt-für-Schritt-Begleitung durch jede Bewerbung — vom Anschreiben bis zum Vorstellungsgespräch."
       }
     ]
   },
@@ -177,6 +258,66 @@
       {
         "q": "Werden meine Daten an Unternehmen weitergegeben?",
         "a": "Nein. Deine Daten gehören dir und werden nicht an Dritte verkauft oder weitergegeben."
+      }
+    ]
+  },
+  "faqJobseeker": {
+    "eyebrow": "FAQ",
+    "title": "Häufige Fragen.",
+    "items": [
+      {
+        "q": "Wie aktuell sind die Stellenangebote in der App?",
+        "a": "ApplyOS bezieht Stellen direkt aus einer der größten Jobdatenbanken Deutschlands — täglich aktualisiert, mit hunderttausenden aktiven Anzeigen."
+      },
+      {
+        "q": "Wie funktioniert das KI-Matching?",
+        "a": "Statt klassischer Keyword-Filter analysiert ApplyOS dein Profil ganzheitlich — Werte, Stärken, Lebensphase, Erfahrungen. Daraus berechnet die App pro Stelle einen Match-Score, der dir auf einen Blick zeigt, wie gut die Stelle wirklich zu dir passt."
+      },
+      {
+        "q": "Werden meine Bewerbungsunterlagen wirklich automatisch erzeugt?",
+        "a": "Ja. Lebenslauf und Anschreiben werden auf Knopfdruck für jede einzelne Stelle personalisiert generiert — du musst nicht jedes Mal von vorne anfangen."
+      },
+      {
+        "q": "Kann ich mich direkt aus der App bewerben?",
+        "a": "ApplyOS leitet dich zur Original-Anzeige des Unternehmens weiter, wo du dich direkt bewerben kannst. So bleibt der Datenschutz gewahrt und du verlierst keine Verbindung zum Arbeitgeber."
+      },
+      {
+        "q": "Wie unterscheidet sich die Kanban-Pipeline von Tools wie Notion oder LinkedIn?",
+        "a": "Sie ist explizit für Bewerbungen gebaut — mit den Stages Entdeckt, Beworben, Interview, Angebot — und automatisch mit deinen App-Aktionen synchronisiert. Kein manuelles Pflegen, keine fremden Felder."
+      },
+      {
+        "q": "Was passiert mit meinen CV-Daten?",
+        "a": "Deine Daten bleiben bei dir. ApplyOS hat keine Unternehmenskunden — kein Profil wird verkauft, kein Lebenslauf an Recruiter durchgereicht."
+      }
+    ]
+  },
+  "faqSchueler": {
+    "eyebrow": "FAQ",
+    "title": "Häufige Fragen.",
+    "items": [
+      {
+        "q": "Bin ich zu jung für ApplyOS?",
+        "a": "ApplyOS ist ab 14 Jahren sinnvoll nutzbar. Wenn du noch zur Schule gehst, durchläufst du ein altersgerechtes Persönlichkeitsprofiling und bekommst Vorschläge für Ausbildung oder Studium — keine Job-Anzeigen."
+      },
+      {
+        "q": "Wie wissenschaftlich ist das Profiling wirklich?",
+        "a": "Das Profiling basiert auf etablierten persönlichkeitspsychologischen Modellen (Big Five, RIASEC) und wurde mit Psycholog:innen entwickelt. Keine Magie, keine Bauchgefühl-Tests — sondern Methoden, die in der Forschung seit Jahrzehnten validiert sind."
+      },
+      {
+        "q": "Hilft mir die App auch bei der Bewerbung um einen Ausbildungsplatz?",
+        "a": "Ja. Nach dem Profiling begleitet dich ApplyOS Schritt für Schritt durch jede Bewerbung — vom Anschreiben über die Vorbereitung des Vorstellungsgesprächs bis zum Tracking, wo du dich schon beworben hast."
+      },
+      {
+        "q": "Was sehen meine Eltern oder Lehrer von der App?",
+        "a": "Nichts — es sei denn, du teilst es selbst. ApplyOS ist deine private App. Profiling-Ergebnisse, Vorschläge und Bewerbungen sind nur für dich sichtbar."
+      },
+      {
+        "q": "Werden meine Daten an Schulen oder Beratungen weitergegeben?",
+        "a": "Nein. ApplyOS hat keine institutionellen Kunden — weder Schulen noch Karriere-Beratungen erhalten Zugriff auf deine Daten."
+      },
+      {
+        "q": "Was, wenn die App eine Ausbildung vorschlägt, die mir nicht gefällt?",
+        "a": "Dann verwirfst du den Vorschlag und gibst Feedback — die App lernt daraus und verfeinert ihre Vorschläge. Du entscheidest immer, was zu dir passt — nicht der Algorithmus."
       }
     ]
   },
