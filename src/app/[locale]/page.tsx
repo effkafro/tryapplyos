@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { WhyApplyOS } from "@/components/sections/why-applyos";
 import { TargetGroups } from "@/components/sections/target-groups";
-import { HowItWorks } from "@/components/sections/how-it-works";
 import { Waitlist } from "@/components/sections/waitlist";
 import { Faq } from "@/components/sections/faq";
 import { CtaBanner } from "@/components/sections/cta-banner";
@@ -41,7 +40,6 @@ export default async function Home({
       <main>
         <Hero />
         <TargetGroups />
-        <HowItWorks />
         <WhyApplyOS />
         <Waitlist initialCount={initialCount} />
         <Faq />

@@ -18,7 +18,6 @@ const audienceLinks = [
 // Anker-Links auf der aktuellen Page (funktionieren primär auf /)
 const anchorLinks = [
   { key: "why" as const, href: "#why" },
-  { key: "how" as const, href: "#how-it-works" },
   { key: "faq" as const, href: "#faq" },
 ];
 
