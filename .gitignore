@@ -43,6 +43,9 @@ yarn-error.log*
 # lokaler Scratch-Ordner (Reviews, Screenshots, Notes)
 /tmp/
 
+# Generierte Artifacts (Pitchdeck, etc.)
+/dist/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
