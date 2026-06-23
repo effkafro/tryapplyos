@@ -342,5 +342,35 @@
       "cookies": "Cookies"
     },
     "copyright": "© 2026 ApplyOS. Alle Rechte vorbehalten."
+  },
+  "authReset": {
+    "title": "Neues Passwort",
+    "titleAccent": "setzen",
+    "subtitle": "Wähle ein sicheres Passwort für dein ApplyOS-Konto.",
+    "passwordLabel": "Neues Passwort",
+    "passwordPlaceholder": "Mindestens 8 Zeichen",
+    "confirmLabel": "Passwort bestätigen",
+    "confirmPlaceholder": "Passwort wiederholen",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen",
+    "requirements": {
+      "length": "Mindestens 8 Zeichen",
+      "uppercase": "Ein Großbuchstabe",
+      "digit": "Eine Zahl"
+    },
+    "submit": "Passwort speichern",
+    "submitting": "Wird gespeichert …",
+    "mismatch": "Die Passwörter stimmen nicht überein.",
+    "verifying": "Einen Moment …",
+    "success": {
+      "title": "Passwort geändert",
+      "body": "Dein Passwort wurde aktualisiert. Öffne ApplyOS und melde dich mit deinem neuen Passwort an."
+    },
+    "invalidToken": {
+      "title": "Link abgelaufen oder ungültig",
+      "body": "Dieser Reset-Link ist abgelaufen oder wurde bereits verwendet. Fordere in der ApplyOS-App unter „Passwort vergessen?“ einen neuen Link an."
+    },
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "networkError": "Netzwerkfehler. Bitte prüfe deine Verbindung."
   }
 }

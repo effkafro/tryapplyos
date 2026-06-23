@@ -342,5 +342,35 @@
       "cookies": "Cookies"
     },
     "copyright": "© 2026 ApplyOS. All rights reserved."
+  },
+  "authReset": {
+    "title": "Set a new",
+    "titleAccent": "password",
+    "subtitle": "Choose a secure password for your ApplyOS account.",
+    "passwordLabel": "New password",
+    "passwordPlaceholder": "At least 8 characters",
+    "confirmLabel": "Confirm password",
+    "confirmPlaceholder": "Repeat password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "requirements": {
+      "length": "At least 8 characters",
+      "uppercase": "One uppercase letter",
+      "digit": "One number"
+    },
+    "submit": "Save password",
+    "submitting": "Saving …",
+    "mismatch": "Passwords don't match.",
+    "verifying": "One moment …",
+    "success": {
+      "title": "Password changed",
+      "body": "Your password has been updated. Open ApplyOS and sign in with your new password."
+    },
+    "invalidToken": {
+      "title": "Link expired or invalid",
+      "body": "This reset link has expired or was already used. Request a new one in the ApplyOS app under \"Forgot password?\"."
+    },
+    "error": "Something went wrong. Please try again.",
+    "networkError": "Network error. Please check your connection."
   }
 }
