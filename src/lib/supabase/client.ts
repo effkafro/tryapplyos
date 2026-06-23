@@ -13,5 +13,12 @@ export function getSupabaseBrowserClient() {
       "Supabase ENV vars missing: NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY",
     );
   }
-  return createBrowserClient(url, key);
+  return createBrowserClient(url, key, {
+    auth: {
+      // Wir verarbeiten das Recovery-Token im Reset-Formular selbst und deterministisch.
+      // detectSessionInUrl=true (Default) würde parallel dazu laufen → Race, und die
+      // Auto-Erkennung bereinigt die URL, was das manuelle Parsen unterläuft.
+      detectSessionInUrl: false,
+    },
+  });
 }

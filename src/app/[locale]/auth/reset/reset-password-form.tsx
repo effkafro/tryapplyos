@@ -53,34 +53,47 @@ export function ResetPasswordForm() {
 
   useEffect(() => setMounted(true), []);
 
-  // Recovery-Session aus der URL herstellen: ?code= (PKCE) oder #access_token (Implicit).
-  // Supabase leitet abgelaufene Links mit #error=… zurück — das fangen wir ab.
+  // Recovery-Session aus der URL herstellen — deterministisch (detectSessionInUrl ist
+  // im Client deaktiviert, sonst Race). #access_token (Implicit, Standard-Recovery-Flow)
+  // bevorzugt, ?code= (PKCE) als Fallback. Abgelaufene/bereits genutzte Links liefert
+  // Supabase als #error=…&error_code=… zurück.
   useEffect(() => {
     let cancelled = false;
     (async () => {
       const hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
       const query = new URLSearchParams(window.location.search);
 
-      if (hash.get("error") || query.get("error")) {
+      const linkFehler =
+        hash.get("error_code") ??
+        query.get("error_code") ??
+        hash.get("error") ??
+        query.get("error");
+      if (linkFehler) {
+        console.warn("[auth/reset] Recovery-Link-Fehler:", linkFehler);
         if (!cancelled) setStatus("invalid");
         return;
       }
+
+      const accessToken = hash.get("access_token");
+      const refreshToken = hash.get("refresh_token");
+      const code = query.get("code");
+
       try {
-        const code = query.get("code");
-        if (code) {
+        if (accessToken && refreshToken) {
+          const { error } = await supabase.auth.setSession({
+            access_token: accessToken,
+            refresh_token: refreshToken,
+          });
+          if (error) throw error;
+        } else if (code) {
           const { error } = await supabase.auth.exchangeCodeForSession(code);
           if (error) throw error;
         } else {
-          const accessToken = hash.get("access_token");
-          const refreshToken = hash.get("refresh_token");
-          if (accessToken && refreshToken) {
-            const { error } = await supabase.auth.setSession({
-              access_token: accessToken,
-              refresh_token: refreshToken,
-            });
-            if (error) throw error;
-          }
+          console.warn("[auth/reset] Kein Token in der URL (Fragment & Query leer).");
+          if (!cancelled) setStatus("invalid");
+          return;
         }
+
         const { data } = await supabase.auth.getSession();
         if (cancelled) return;
         if (data.session) {
@@ -88,9 +101,11 @@ export function ResetPasswordForm() {
           // Token aus der Adresszeile entfernen (Sicherheit).
           window.history.replaceState(null, "", window.location.pathname);
         } else {
+          console.warn("[auth/reset] setSession ok, aber keine aktive Session.");
           setStatus("invalid");
         }
-      } catch {
+      } catch (e) {
+        console.warn("[auth/reset] Session konnte nicht hergestellt werden:", e);
         if (!cancelled) setStatus("invalid");
       }
     })();
