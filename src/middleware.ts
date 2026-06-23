@@ -39,6 +39,12 @@ export default function middleware(req: NextRequest) {
   if (/\.[a-z0-9]+$/i.test(pathname) || pathname.startsWith("/.well-known/")) {
     return NextResponse.next();
   }
+  // Passwort-Reset (Ziel des Supabase-Recovery-Links) muss ohne Basic-Auth
+  // erreichbar sein — sonst blockiert der Browser-Login-Dialog den Reset.
+  // Locale-agnostisch: /auth/reset, /de/auth/reset, /en/auth/reset.
+  if (/^\/(de\/|en\/)?auth\/reset(\/|$)/.test(pathname)) {
+    return intl(req);
+  }
   if (!isAuthorized(req)) return unauthorized();
   return intl(req);
 }
