@@ -54,9 +54,10 @@ export function ResetPasswordForm() {
   useEffect(() => setMounted(true), []);
 
   // Recovery-Session aus der URL herstellen — deterministisch (detectSessionInUrl ist
-  // im Client deaktiviert, sonst Race). #access_token (Implicit, Standard-Recovery-Flow)
-  // bevorzugt, ?code= (PKCE) als Fallback. Abgelaufene/bereits genutzte Links liefert
-  // Supabase als #error=…&error_code=… zurück.
+  // im Client deaktiviert, sonst Race). Bevorzugt der token_hash-Flow (verifyOtp): der
+  // ist geräteunabhängig und prefetch-fest. #access_token (Implicit) / ?code= (PKCE)
+  // bleiben als Fallback. Abgelaufene/genutzte Links liefert Supabase als
+  // ?error=…&error_code=… (oder im Fragment) zurück.
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -74,12 +75,19 @@ export function ResetPasswordForm() {
         return;
       }
 
+      const tokenHash = query.get("token_hash");
       const accessToken = hash.get("access_token");
       const refreshToken = hash.get("refresh_token");
       const code = query.get("code");
 
       try {
-        if (accessToken && refreshToken) {
+        if (tokenHash) {
+          const { error } = await supabase.auth.verifyOtp({
+            token_hash: tokenHash,
+            type: "recovery",
+          });
+          if (error) throw error;
+        } else if (accessToken && refreshToken) {
           const { error } = await supabase.auth.setSession({
             access_token: accessToken,
             refresh_token: refreshToken,
