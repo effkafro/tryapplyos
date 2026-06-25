@@ -372,5 +372,16 @@
     },
     "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
     "networkError": "Netzwerkfehler. Bitte prüfe deine Verbindung."
+  },
+  "authConfirm": {
+    "verifying": "Einen Moment …",
+    "success": {
+      "title": "E-Mail bestätigt",
+      "body": "Deine E-Mail-Adresse ist bestätigt. Öffne ApplyOS und melde dich an."
+    },
+    "invalidToken": {
+      "title": "Link abgelaufen oder ungültig",
+      "body": "Dieser Bestätigungslink ist abgelaufen oder wurde bereits verwendet. Registriere dich erneut oder fordere in der App eine neue Bestätigung an."
+    }
   }
 }
