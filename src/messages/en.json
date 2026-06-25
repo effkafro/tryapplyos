@@ -372,5 +372,16 @@
     },
     "error": "Something went wrong. Please try again.",
     "networkError": "Network error. Please check your connection."
+  },
+  "authConfirm": {
+    "verifying": "One moment …",
+    "success": {
+      "title": "Email confirmed",
+      "body": "Your email address is confirmed. Open ApplyOS and sign in."
+    },
+    "invalidToken": {
+      "title": "Link expired or invalid",
+      "body": "This confirmation link has expired or was already used. Sign up again or request a new confirmation in the app."
+    }
   }
 }

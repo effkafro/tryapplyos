@@ -18,5 +18,6 @@ export const routing = defineRouting({
     "/impressum": { de: "/impressum", en: "/imprint" },
     "/cookies": "/cookies",
     "/auth/reset": "/auth/reset",
+    "/auth/confirm": "/auth/confirm",
   },
 });
