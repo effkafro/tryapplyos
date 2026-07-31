@@ -271,7 +271,7 @@
       },
       {
         "q": "How does the AI matching work?",
-        "a": "Instead of keyword filters, ApplyOS analyzes your profile holistically — values, strengths, life stage, experience. From that, it computes a match score per role so you see at a glance how well it fits."
+        "a": "Instead of keyword filters, ApplyOS analyzes your profile holistically. From that, it computes a match score per role so you see at a glance how well it fits."
       },
       {
         "q": "Are application docs really generated automatically?",
@@ -301,7 +301,7 @@
       },
       {
         "q": "How scientific is the profiling really?",
-        "a": "The profiling builds on established personality models (Big Five, RIASEC) and was developed with psychologists. No magic, no gut-feeling tests — methods validated in research for decades."
+        "a": "The profiling builds on established personality models and was developed with psychologists. No magic, no gut-feeling tests — methods validated in research for decades."
       },
       {
         "q": "Does the app also help with apprenticeship applications?",

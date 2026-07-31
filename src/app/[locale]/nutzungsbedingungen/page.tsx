@@ -61,8 +61,8 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
           </h2>
           <p>
             {isDE
-              ? "Die in ApplyOS angezeigten Stellenangebote stammen von der Bundesagentur für Arbeit. ApplyOS übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der angezeigten Stellenangebote. Wir sind weder Vermittler noch Arbeitgeber und haben keinen Einfluss auf den Inhalt der Stellenanzeigen."
-              : "The job listings displayed in ApplyOS come from the German Federal Employment Agency (Bundesagentur für Arbeit). ApplyOS does not guarantee the accuracy, completeness, or timeliness of displayed job listings. We are neither an employment agency nor an employer and have no influence on the content of job advertisements."}
+              ? "Die in ApplyOS angezeigten Stellenangebote stammen aus einer der größten Jobdatenbanken Deutschlands. ApplyOS übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der angezeigten Stellenangebote. Wir sind weder Vermittler noch Arbeitgeber und haben keinen Einfluss auf den Inhalt der Stellenanzeigen."
+              : "The job listings displayed in ApplyOS come from one of Germany's largest job databases. ApplyOS does not guarantee the accuracy, completeness, or timeliness of displayed job listings. We are neither an employment agency nor an employer and have no influence on the content of job advertisements."}
           </p>
 
           {/* 5. Generierte Inhalte */}

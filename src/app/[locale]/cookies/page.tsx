@@ -103,8 +103,8 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
           </h2>
           <p>
             {isDE
-              ? "Bei Fragen zur Cookie-Richtlinie wenden Sie sich bitte an: [E-Mail-Adresse]"
-              : "For questions about the cookie policy, please contact: [Email address]"}
+              ? "Bei Fragen zur Cookie-Richtlinie wenden Sie sich bitte an: Support@tryapplyos.com"
+              : "For questions about the cookie policy, please contact: Support@tryapplyos.com"}
           </p>
         </div>
       </main>
