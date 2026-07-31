@@ -25,8 +25,8 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </h2>
           <p className="whitespace-pre-line">
             {isDE
-              ? '[Ihr Name / Firmenname]\n[Adresse]\n[E-Mail]\n\nNachfolgend "wir" oder "Anbieter" genannt.'
-              : "[Your Name / Company Name]\n[Address]\n[Email]\n\nHereinafter referred to as \"we\" or \"provider\"."}
+              ? 'Simple UG (haftungsbeschränkt)\nc/o ADIUVO Rechtsanwälte PartG mbB\nGrafenberger Allee 125\n40237 Düsseldorf\nE-Mail: Support@tryapplyos.com\n\nNachfolgend "wir" oder "Anbieter" genannt.'
+              : "Simple UG (haftungsbeschränkt)\nc/o ADIUVO Rechtsanwälte PartG mbB\nGrafenberger Allee 125\n40237 Düsseldorf, Germany\nEmail: Support@tryapplyos.com\n\nHereinafter referred to as \"we\" or \"provider\"."}
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
@@ -93,8 +93,8 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </h2>
           <p>
             {isDE
-              ? "Bei Fragen zum Datenschutz wenden Sie sich bitte an: [E-Mail-Adresse]"
-              : "For questions about data protection, please contact: [Email address]"}
+              ? "Bei Fragen zum Datenschutz wenden Sie sich bitte an: Support@tryapplyos.com"
+              : "For questions about data protection, please contact: Support@tryapplyos.com"}
           </p>
         </div>
       </main>

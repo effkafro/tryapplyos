@@ -25,8 +25,8 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
           </h2>
           <p className="whitespace-pre-line">
             {isDE
-              ? "[Ihr Name / Firmenname]\n[Straße Hausnummer]\n[PLZ Ort]\n\nE-Mail: [E-Mail-Adresse]\nTelefon: [Telefonnummer]"
-              : "[Your Name / Company Name]\n[Street Address]\n[Postal Code City]\n\nEmail: [Email address]\nPhone: [Phone number]"}
+              ? "Simple UG (haftungsbeschränkt)\nc/o ADIUVO Rechtsanwälte PartG mbB\nGrafenberger Allee 125\n40237 Düsseldorf\n\nE-Mail: Support@tryapplyos.com"
+              : "Simple UG (haftungsbeschränkt)\nc/o ADIUVO Rechtsanwälte PartG mbB\nGrafenberger Allee 125\n40237 Düsseldorf, Germany\n\nEmail: Support@tryapplyos.com"}
           </p>
 
           {/* Verantwortlich für den Inhalt */}
@@ -35,8 +35,8 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
           </h2>
           <p className="whitespace-pre-line">
             {isDE
-              ? "[Ihr Name]\n[Straße Hausnummer]\n[PLZ Ort]"
-              : "[Your Name]\n[Street Address]\n[Postal Code City]"}
+              ? "Florian Krause\nc/o ADIUVO Rechtsanwälte PartG mbB\nGrafenberger Allee 125\n40237 Düsseldorf"
+              : "Florian Krause\nc/o ADIUVO Rechtsanwälte PartG mbB\nGrafenberger Allee 125\n40237 Düsseldorf, Germany"}
           </p>
 
           {/* Streitschlichtung */}
