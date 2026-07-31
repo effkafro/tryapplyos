@@ -331,6 +331,7 @@
     "tagline": "Dein KI-Karriere-Agent. Proaktiv. Persönlich. Einfach.",
     "product": "Produkt",
     "legal": "Rechtliches",
+    "support": "Hilfe",
     "links": {
       "features": "Features",
       "how": "Ablauf",
@@ -339,7 +340,9 @@
       "privacy": "Datenschutz",
       "terms": "Nutzungsbedingungen",
       "imprint": "Impressum",
-      "cookies": "Cookies"
+      "cookies": "Cookies",
+      "support": "Support & Hilfe",
+      "contact": "Kontakt"
     },
     "copyright": "© 2026 ApplyOS. Alle Rechte vorbehalten."
   },

@@ -45,9 +45,10 @@ export default function middleware(req: NextRequest) {
   if (/^\/(de\/|en\/)?auth\/(reset|confirm)(\/|$)/.test(pathname)) {
     return intl(req);
   }
-  // Rechtsseiten müssen öffentlich sein: Die App-Paywall verlinkt darauf
-  // (App Review Guideline 3.1) und Apple prüft die Links bei der Review.
-  if (/^\/(de\/|en\/)?(datenschutz|nutzungsbedingungen|impressum|cookies)(\/|$)/.test(pathname)) {
+  // Rechts- und Support-Seiten müssen öffentlich sein: Die App-Paywall verlinkt
+  // darauf (App Review Guideline 3.1) und Apple prüft die Links bei der Review;
+  // die Support-URL ist zusätzlich in App Store Connect hinterlegt.
+  if (/^\/(de\/|en\/)?(datenschutz|nutzungsbedingungen|impressum|cookies|support|privacy|terms|imprint)(\/|$)/.test(pathname)) {
     return intl(req);
   }
   if (!isAuthorized(req)) return unauthorized();

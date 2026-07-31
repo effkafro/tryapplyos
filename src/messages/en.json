@@ -331,6 +331,7 @@
     "tagline": "Your AI career agent. Proactive. Personal. Free.",
     "product": "Product",
     "legal": "Legal",
+    "support": "Help",
     "links": {
       "features": "Features",
       "how": "How it works",
@@ -339,7 +340,9 @@
       "privacy": "Privacy",
       "terms": "Terms",
       "imprint": "Imprint",
-      "cookies": "Cookies"
+      "cookies": "Cookies",
+      "support": "Support & Help",
+      "contact": "Contact"
     },
     "copyright": "© 2026 ApplyOS. All rights reserved."
   },

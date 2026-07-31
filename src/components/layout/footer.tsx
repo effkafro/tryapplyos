@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <footer className="bg-e-footer border-t border-[var(--line)]">
       <div className="mx-auto max-w-[1180px] px-6 sm:px-10 pt-14 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 mb-10">
           <div>
             <div className="flex items-center gap-2.5 mb-3.5">
               <Image
@@ -59,6 +59,30 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-[11px] text-e-faint uppercase tracking-[0.14em] mb-3.5">
+              {t("support")}
+            </div>
+            <ul className="flex flex-col gap-2.5 list-none p-0 m-0">
+              <li>
+                <Link
+                  href="/support"
+                  className="text-[13px] text-e-text-2 hover:text-e-text transition-colors"
+                >
+                  {t("links.support")}
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="mailto:Support@tryapplyos.com"
+                  className="text-[13px] text-e-text-2 hover:text-e-text transition-colors"
+                >
+                  {t("links.contact")}
+                </a>
+              </li>
             </ul>
           </div>
 

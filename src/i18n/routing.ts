@@ -17,6 +17,7 @@ export const routing = defineRouting({
     "/nutzungsbedingungen": { de: "/nutzungsbedingungen", en: "/terms" },
     "/impressum": { de: "/impressum", en: "/imprint" },
     "/cookies": "/cookies",
+    "/support": "/support",
     "/auth/reset": "/auth/reset",
     "/auth/confirm": "/auth/confirm",
   },
