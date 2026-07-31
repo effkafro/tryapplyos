@@ -18,7 +18,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
       <main className="mx-auto max-w-3xl px-6 pt-32 pb-20">
         <h1 className="mb-8 text-3xl font-bold">{isDE ? "Datenschutzerklärung" : "Privacy Policy"}</h1>
         <div className="space-y-6 text-sm leading-relaxed text-e-text-2">
-          <p>{isDE ? "Stand: März 2026" : "Last updated: March 2026"}</p>
+          <p>{isDE ? "Stand: Juli 2026" : "Last updated: July 2026"}</p>
 
           <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "1. Verantwortlicher" : "1. Controller"}
@@ -53,7 +53,16 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </ul>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "4. Keine Weitergabe an Unternehmenskunden" : "4. No Sharing with Corporate Clients"}
+            {isDE ? "4. Käufe und Abonnements" : "4. Purchases and Subscriptions"}
+          </h2>
+          <p>
+            {isDE
+              ? "Abonnements (ApplyOS Plus / Studi) werden als In-App-Kauf über Apple abgeschlossen. Die Zahlungsabwicklung erfolgt ausschließlich durch Apple als eigenständigen Verantwortlichen; wir erhalten zu keinem Zeitpunkt Zahlungs- oder Kreditkartendaten. Zur Bereitstellung der Premium-Funktionen verarbeiten wir Abonnement-Informationen: Produktkennung, eine pseudonyme Apple-Transaktionsnummer, den Abo-Status und das Ablaufdatum, verknüpft mit Ihrem Nutzerkonto. Apple informiert unsere Server über Statusänderungen Ihres Abonnements (z. B. Verlängerung, Kündigung, Rückerstattung). Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Diese Daten werden gelöscht, wenn Sie Ihr Konto löschen."
+              : "Subscriptions (ApplyOS Plus / Studi) are purchased as in-app purchases via Apple. Payment processing is carried out exclusively by Apple as an independent controller; we never receive payment or credit card data. To provide premium features, we process subscription information: product identifier, a pseudonymous Apple transaction number, subscription status, and expiry date, linked to your user account. Apple notifies our servers of status changes to your subscription (e.g. renewal, cancellation, refund). The legal basis is Art. 6(1)(b) GDPR (performance of contract). This data is deleted when you delete your account."}
+          </p>
+
+          <h2 className="text-lg font-semibold text-e-text">
+            {isDE ? "5. Keine Weitergabe an Unternehmenskunden" : "5. No Sharing with Corporate Clients"}
           </h2>
           <p>
             {isDE
@@ -62,7 +71,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "5. Hosting und Website" : "5. Hosting and Website"}
+            {isDE ? "6. Hosting und Website" : "6. Hosting and Website"}
           </h2>
           <p>
             {isDE
@@ -71,7 +80,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "6. Ihre Rechte" : "6. Your Rights"}
+            {isDE ? "7. Ihre Rechte" : "7. Your Rights"}
           </h2>
           <p>
             {isDE
@@ -80,7 +89,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "7. Kontakt" : "7. Contact"}
+            {isDE ? "8. Kontakt" : "8. Contact"}
           </h2>
           <p>
             {isDE

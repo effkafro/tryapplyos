@@ -18,7 +18,7 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
       <main className="mx-auto max-w-3xl px-6 pt-32 pb-20">
         <h1 className="mb-8 text-3xl font-bold">{isDE ? "Nutzungsbedingungen" : "Terms of Service"}</h1>
         <div className="space-y-6 text-sm leading-relaxed text-e-text-2">
-          <p>{isDE ? "Stand: März 2026" : "Last updated: March 2026"}</p>
+          <p>{isDE ? "Stand: Juli 2026" : "Last updated: July 2026"}</p>
 
           {/* 1. Geltungsbereich */}
           <h2 className="text-lg font-semibold text-e-text">
@@ -40,9 +40,24 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
               : "ApplyOS is an AI-powered career agent that supports you in job searching and career orientation. The app is intended for persons aged 16 and older. You are responsible for the accuracy of the profile data you enter."}
           </p>
 
-          {/* 3. Stellenangebote */}
+          {/* 3. Abonnements */}
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "3. Stellenangebote" : "3. Job Listings"}
+            {isDE ? "3. Kostenlose Nutzung und Abonnements" : "3. Free Use and Subscriptions"}
+          </h2>
+          <p>
+            {isDE
+              ? "Die Kernfunktionen von ApplyOS (Profil, Job-Radar, Bewerbungs-Pipeline) sind kostenlos nutzbar. Erweiterte Zusatzfunktionen können über ein automatisch verlängerndes Abonnement freigeschaltet werden („ApplyOS Plus“ bzw. „ApplyOS Studi“ für Nutzer im Schulabgänger-Modus, d. h. bei Ausbildungs- und Studienplatzsuche). Abonnements sind mit Laufzeiten von 1 Monat, 3 Monaten oder 1 Jahr erhältlich; die jeweils gültigen Preise werden vor dem Kauf in der App und im App Store angezeigt. Einzelne Zusatzfunktionen unterliegen fairen Nutzungskontingenten (z. B. einer monatlichen Höchstzahl KI-gestützter Vorgänge); Details werden in der App angezeigt."
+              : "The core features of ApplyOS (profile, job radar, application pipeline) are free to use. Additional premium features can be unlocked via an auto-renewing subscription (“ApplyOS Plus” or “ApplyOS Studi” for users in school-leaver mode, i.e. searching for apprenticeships or study places). Subscriptions are available with terms of 1 month, 3 months, or 1 year; the applicable prices are displayed in the app and in the App Store before purchase. Certain premium features are subject to fair-use quotas (e.g. a monthly maximum of AI-assisted operations); details are shown in the app."}
+          </p>
+          <p>
+            {isDE
+              ? "Der Kauf erfolgt als In-App-Kauf über Ihr Apple-Konto und wird von Apple abgewickelt; wir erhalten keine Zahlungsdaten. Neukunden erhalten einmalig ein kostenloses Probeabo von 7 Tagen (einmal pro Apple-ID). Abonnements — einschließlich des Probeabos — verlängern sich automatisch um die jeweilige Laufzeit bzw. gehen in ein kostenpflichtiges Abonnement über, sofern sie nicht mindestens 24 Stunden vor Ende der laufenden Periode gekündigt werden. Die Kündigung ist jederzeit in den Abonnement-Einstellungen Ihres Apple-Kontos möglich und wirkt zum Ende der laufenden Periode. Erstattungen richten sich nach den Bedingungen von Apple und können unter reportaproblem.apple.com beantragt werden; gesetzliche Widerrufsrechte gegenüber Apple bleiben unberührt."
+              : "Purchases are made as in-app purchases via your Apple account and are processed by Apple; we do not receive any payment data. New customers receive a one-time free trial of 7 days (once per Apple ID). Subscriptions — including the trial — renew automatically for the respective term or convert into a paid subscription unless cancelled at least 24 hours before the end of the current period. You can cancel at any time in the subscription settings of your Apple account, effective at the end of the current period. Refunds are subject to Apple's terms and can be requested at reportaproblem.apple.com; statutory withdrawal rights vis-à-vis Apple remain unaffected."}
+          </p>
+
+          {/* 4. Stellenangebote */}
+          <h2 className="text-lg font-semibold text-e-text">
+            {isDE ? "4. Stellenangebote" : "4. Job Listings"}
           </h2>
           <p>
             {isDE
@@ -50,9 +65,9 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
               : "The job listings displayed in ApplyOS come from the German Federal Employment Agency (Bundesagentur für Arbeit). ApplyOS does not guarantee the accuracy, completeness, or timeliness of displayed job listings. We are neither an employment agency nor an employer and have no influence on the content of job advertisements."}
           </p>
 
-          {/* 4. Generierte Inhalte */}
+          {/* 5. Generierte Inhalte */}
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "4. Generierte Inhalte" : "4. Generated Content"}
+            {isDE ? "5. Generierte Inhalte" : "5. Generated Content"}
           </h2>
           <p>
             {isDE
@@ -60,9 +75,9 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
               : "ApplyOS can generate cover letters, resumes, and other documents using artificial intelligence. These contents are to be understood as drafts. As a user, you are solely responsible for reviewing, adapting, and final use of all generated documents. ApplyOS assumes no liability for content created by the AI."}
           </p>
 
-          {/* 5. Verfügbarkeit */}
+          {/* 6. Verfügbarkeit */}
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "5. Verfügbarkeit" : "5. Availability"}
+            {isDE ? "6. Verfügbarkeit" : "6. Availability"}
           </h2>
           <p>
             {isDE
@@ -70,9 +85,9 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
               : "We strive to keep the app and website available at all times but cannot guarantee uninterrupted availability. Maintenance, technical issues, or force majeure may lead to temporary restrictions."}
           </p>
 
-          {/* 6. Haftungsbeschränkung */}
+          {/* 7. Haftungsbeschränkung */}
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "6. Haftungsbeschränkung" : "6. Limitation of Liability"}
+            {isDE ? "7. Haftungsbeschränkung" : "7. Limitation of Liability"}
           </h2>
           <p>
             {isDE
@@ -80,9 +95,9 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
               : "ApplyOS is provided \"as is\". We are not liable for damages arising from the use of the app or website, unless caused by intentional or grossly negligent conduct on our part. In particular, we are not liable for the success of applications or the quality of AI-generated content."}
           </p>
 
-          {/* 7. Änderungen der Nutzungsbedingungen */}
+          {/* 8. Änderungen der Nutzungsbedingungen */}
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "7. Änderungen der Nutzungsbedingungen" : "7. Changes to Terms"}
+            {isDE ? "8. Änderungen der Nutzungsbedingungen" : "8. Changes to Terms"}
           </h2>
           <p>
             {isDE
@@ -90,9 +105,9 @@ export default async function NutzungsbedingungenPage({ params }: { params: Prom
               : "We reserve the right to modify these Terms of Service at any time. Changes will be published on this page. Continued use of the app after publication of changes constitutes acceptance of the updated terms."}
           </p>
 
-          {/* 8. Anwendbares Recht */}
+          {/* 9. Anwendbares Recht */}
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "8. Anwendbares Recht" : "8. Applicable Law"}
+            {isDE ? "9. Anwendbares Recht" : "9. Applicable Law"}
           </h2>
           <p>
             {isDE

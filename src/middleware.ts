@@ -45,6 +45,11 @@ export default function middleware(req: NextRequest) {
   if (/^\/(de\/|en\/)?auth\/(reset|confirm)(\/|$)/.test(pathname)) {
     return intl(req);
   }
+  // Rechtsseiten müssen öffentlich sein: Die App-Paywall verlinkt darauf
+  // (App Review Guideline 3.1) und Apple prüft die Links bei der Review.
+  if (/^\/(de\/|en\/)?(datenschutz|nutzungsbedingungen|impressum|cookies)(\/|$)/.test(pathname)) {
+    return intl(req);
+  }
   if (!isAuthorized(req)) return unauthorized();
   return intl(req);
 }
