@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "ApplyOS — Dein KI-Karriere-Agent",
-    "description": "ApplyOS lernt, was du wirklich willst — und findet täglich die besten Jobs für dich. Ob Berufserfahrene oder Schüler."
+    "description": "ApplyOS lernt, was du wirklich willst und findet täglich die besten Jobs für dich. Ob Berufserfahrene oder Schüler."
   },
   "metaJobseeker": {
     "title": "ApplyOS für Jobsuchende — automatische Jobsuche mit KI",
@@ -26,7 +26,7 @@
   "hero": {
     "eyebrow": "Exclusive Early Access",
     "title": ["Dein nächster Karriereschritt.", "Proaktiv. Persönlich. KI-gestützt."],
-    "subtitle": "ApplyOS lernt, was du wirklich willst — und findet täglich die besten Jobs für dich. Ob Berufserfahrene oder Schüler.",
+    "subtitle": "ApplyOS lernt, was du wirklich willst und findet täglich die besten Jobs für dich. Ob Berufserfahrene oder Schüler.",
     "cta": "Auf Warteliste setzen",
     "meta": "Kostenlos · Limitierte Plätze",
     "screenshotAlt": "ApplyOS App Vorschau"
