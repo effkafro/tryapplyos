@@ -43,8 +43,8 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </h2>
           <p>
             {isDE
-              ? "ApplyOS speichert Ihre Profildaten primär lokal auf Ihrem Gerät (SwiftData). Eine optionale Synchronisation mit unseren Servern (Supabase) erfolgt nur mit Ihrer ausdrücklichen Einwilligung. Folgende Daten werden verarbeitet:"
-              : "ApplyOS stores your profile data primarily locally on your device (SwiftData). Optional synchronization with our servers (Supabase) only occurs with your explicit consent. The following data is processed:"}
+              ? "ApplyOS ist nur mit einem Nutzerkonto nutzbar. Bei der Registrierung legen wir ein Konto auf unseren Servern (Supabase) an. Ihre Profil- und Bewerbungsdaten werden auf Ihrem Gerät gespeichert und mit Ihrem Konto synchronisiert, damit sie geräteübergreifend verfügbar bleiben und bei Geräteverlust nicht verloren gehen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung). Für die KI-gestützte Verarbeitung Ihrer Daten holen wir eine gesonderte Einwilligung ein (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit in den Datenschutz-Einstellungen der App widerrufen können. Folgende Daten werden verarbeitet:"
+              : "ApplyOS can only be used with a user account. When you register, we create an account on our servers (Supabase). Your profile and application data are stored on your device and synchronized with your account so that they remain available across devices and are not lost if you lose your device. The legal basis is Art. 6(1)(b) GDPR (performance of contract). For AI-assisted processing of your data, we obtain separate consent (Art. 6(1)(a) GDPR), which you can withdraw at any time in the app's privacy settings. The following data is processed:"}
           </p>
           <ul className="list-disc space-y-1 pl-6">
             <li>{isDE ? "Profildaten (Kompetenzen, Berufserfahrung, Präferenzen)" : "Profile data (skills, work experience, preferences)"}</li>
