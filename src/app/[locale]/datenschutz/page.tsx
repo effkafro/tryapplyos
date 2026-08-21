@@ -18,7 +18,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
       <main className="mx-auto max-w-3xl px-6 pt-32 pb-20">
         <h1 className="mb-8 text-3xl font-bold">{isDE ? "Datenschutzerklärung" : "Privacy Policy"}</h1>
         <div className="space-y-6 text-sm leading-relaxed text-e-text-2">
-          <p>{isDE ? "Stand: Juli 2026" : "Last updated: July 2026"}</p>
+          <p>{isDE ? "Stand: August 2026" : "Last updated: August 2026"}</p>
 
           <h2 className="text-lg font-semibold text-e-text">
             {isDE ? "1. Verantwortlicher" : "1. Controller"}
@@ -53,7 +53,16 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </ul>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "4. Käufe und Abonnements" : "4. Purchases and Subscriptions"}
+            {isDE ? "4. Nutzungsstatistiken und Fehlerdiagnose" : "4. Usage Statistics and Error Diagnostics"}
+          </h2>
+          <p>
+            {isDE
+              ? "Nur mit Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) erfassen wir in der App statistische Nutzungsdaten und Fehlerberichte über den Dienst PostHog (PostHog Inc.), betrieben auf Servern in der EU (Frankfurt). Die Einwilligung ist standardmäßig deaktiviert und kann jederzeit in den Datenschutz-Einstellungen der App widerrufen werden. Erfasst werden ausschließlich vordefinierte Ereignisse (z. B. welche Funktionen genutzt werden) sowie technische Absturz- und Fehlerberichte — keine Bewerbungsdaten, keine Freitexte, keine Suchbegriffe und keine Standortdaten; die IP-Adresse wird nicht gespeichert. Die Daten werden unter einer zufälligen, geräte-bezogenen Kennung ohne Verknüpfung zu Ihrem Nutzerkonto verarbeitet. Bei Widerruf der Einwilligung wird diese Kennung verworfen; eine spätere erneute Einwilligung beginnt mit einer neuen Kennung."
+              : "Only with your explicit consent (Art. 6(1)(a) GDPR) do we collect statistical usage data and error reports in the app via PostHog (PostHog Inc.), operated on servers in the EU (Frankfurt). Consent is disabled by default and can be withdrawn at any time in the app's privacy settings. Only predefined events are collected (e.g. which features are used) as well as technical crash and error reports — no application data, no free text, no search terms, and no location data; the IP address is not stored. The data is processed under a random, device-based identifier with no link to your user account. If you withdraw consent, this identifier is discarded; renewed consent starts with a new identifier."}
+          </p>
+
+          <h2 className="text-lg font-semibold text-e-text">
+            {isDE ? "5. Käufe und Abonnements" : "5. Purchases and Subscriptions"}
           </h2>
           <p>
             {isDE
@@ -62,7 +71,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "5. Keine Weitergabe an Unternehmenskunden" : "5. No Sharing with Corporate Clients"}
+            {isDE ? "6. Keine Weitergabe an Unternehmenskunden" : "6. No Sharing with Corporate Clients"}
           </h2>
           <p>
             {isDE
@@ -71,7 +80,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "6. Hosting und Website" : "6. Hosting and Website"}
+            {isDE ? "7. Hosting und Website" : "7. Hosting and Website"}
           </h2>
           <p>
             {isDE
@@ -80,7 +89,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "7. Ihre Rechte" : "7. Your Rights"}
+            {isDE ? "8. Ihre Rechte" : "8. Your Rights"}
           </h2>
           <p>
             {isDE
@@ -89,7 +98,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "8. Kontakt" : "8. Contact"}
+            {isDE ? "9. Kontakt" : "9. Contact"}
           </h2>
           <p>
             {isDE
