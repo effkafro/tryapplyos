@@ -53,7 +53,38 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </ul>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "4. Nutzungsstatistiken und Fehlerdiagnose" : "4. Usage Statistics and Error Diagnostics"}
+            {isDE ? "4. KI-gestützte Funktionen" : "4. AI-Powered Features"}
+          </h2>
+          <p>
+            {isDE
+              ? "Kernfunktionen von ApplyOS nutzen große Sprachmodelle (KI). Diese Verarbeitung erfolgt ausschließlich auf Grundlage Ihrer gesonderten, ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die wir vor der ersten Nutzung einholen und die Sie jederzeit in den Datenschutz-Einstellungen der App mit Wirkung für die Zukunft widerrufen können. Ohne Einwilligung bleiben die KI-Funktionen deaktiviert; die übrige App bleibt nutzbar. Für die KI-Verarbeitung setzen wir den Dienst OpenRouter (OpenRouter, Inc., USA) als technischen Vermittler ein, der die Anfragen an Sprachmodelle von Google (Gemini) weiterleitet. Folgende Funktionen nutzen KI und übermitteln dabei die jeweils genannten Daten:"
+              : "Core features of ApplyOS use large language models (AI). This processing takes place exclusively on the basis of your separate, explicit consent (Art. 6(1)(a) GDPR), which we obtain before first use and which you can withdraw at any time in the app's privacy settings with effect for the future. Without consent, the AI features remain disabled; the rest of the app remains usable. For AI processing we use the service OpenRouter (OpenRouter, Inc., USA) as a technical intermediary, which forwards the requests to language models operated by Google (Gemini). The following features use AI and transmit the data listed:"}
+          </p>
+          <ul className="list-disc space-y-1 pl-6">
+            <li>{isDE ? "Anschreiben-Generator: Vor- und Nachname, Wunschberuf, Kompetenzen und beruflicher Werdegang sowie die Stellenbeschreibung" : "Cover letter generator: first and last name, desired job, skills and career history, plus the job description"}</li>
+            <li>{isDE ? "Lebenslauf-Analyse: der Text Ihres hochgeladenen Lebenslaufs — direkt identifizierende Angaben (Name, Adresse, E-Mail, Telefonnummer, Geburtsdatum) werden vor der Übertragung auf Ihrem Gerät entfernt" : "Résumé analysis: the text of your uploaded résumé — directly identifying details (name, address, email, phone number, date of birth) are removed on your device before transmission"}</li>
+            <li>{isDE ? "ATS-Optimierung: Kurzprofil, Werdegang und Kompetenzen (ohne Name und Kontaktdaten) sowie die Stellenbeschreibung" : "ATS optimization: profile summary, career history and skills (without name and contact details), plus the job description"}</li>
+            <li>{isDE ? "Kultur-Analyse und Aufgaben-Zusammenfassung von Stellenanzeigen: nur der Text der Stellenanzeige und der Unternehmensname, keine Daten aus Ihrem Profil" : "Culture analysis and task summary of job postings: only the text of the job posting and the company name, no data from your profile"}</li>
+            <li>{isDE ? "Interview-Vorbereitung: Stellenbeschreibung und deren Analyse-Ergebnisse, keine Daten aus Ihrem Profil" : "Interview preparation: job description and its analysis results, no data from your profile"}</li>
+            <li>{isDE ? "Berufsfeld-Zuordnung: Ihr Wunschberuf und Ihre Kompetenzen, ohne Name und Kontaktdaten" : "Career field matching: your desired job and your skills, without name and contact details"}</li>
+          </ul>
+          <p>
+            {isDE
+              ? "Die Server von OpenRouter und Google befinden sich in den USA. Die Übermittlung in dieses Drittland stützen wir auf die EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Zusätzlich übermitteln wir alle Anfragen mit der verbindlichen Vorgabe, dass sie beim Anbieter weder gespeichert noch für das Training von KI-Modellen verwendet werden dürfen (Zero-Data-Retention-Konfiguration); sie werden nur zur unmittelbaren Beantwortung verarbeitet. Jede KI-Funktion unterliegt einem Nutzungslimit. KI-generierte Inhalte werden in der App als solche gekennzeichnet. Automatisierte Entscheidungen mit rechtlicher Wirkung im Sinne des Art. 22 DSGVO finden nicht statt — alle Bewerbungsentscheidungen treffen Sie selbst. Erteilung und Widerruf Ihrer Einwilligung protokollieren wir (Datum, Version der Einwilligungserklärung) zum Nachweis nach Art. 7 DSGVO; dieses Protokoll wird mit Ihrem Konto gelöscht."
+              : "The servers of OpenRouter and Google are located in the USA. We base this third-country transfer on the EU Standard Contractual Clauses (Art. 46(2)(c) GDPR). In addition, we submit all requests with the binding requirement that they may neither be stored by the provider nor used for training AI models (zero-data-retention configuration); they are processed solely to generate the immediate response. Each AI feature is subject to a usage limit. AI-generated content is labeled as such in the app. No automated decisions with legal effect within the meaning of Art. 22 GDPR are made — you make all application decisions yourself. We log the granting and withdrawal of your consent (date, version of the consent text) as proof under Art. 7 GDPR; this log is deleted together with your account."}
+          </p>
+
+          <h2 className="text-lg font-semibold text-e-text">
+            {isDE ? "5. Missbrauchsabwehr (Apple DeviceCheck)" : "5. Abuse Prevention (Apple DeviceCheck)"}
+          </h2>
+          <p>
+            {isDE
+              ? "Um zu verhindern, dass kostenlose Nutzungskontingente durch wiederholtes Löschen und Neuanlegen von Konten umgangen werden, nutzen wir den DeviceCheck-Dienst von Apple (Apple Inc.). Dabei werden bei Apple zwei gerätebezogene Markierungs-Bits gespeichert; deren Bedeutung ist nur uns bekannt, während wir umgekehrt keine Gerätekennung erhalten — eine Identifizierung Ihres Geräts oder Ihrer Person durch uns ist darüber nicht möglich. Wir speichern lediglich das Prüfergebnis (Kontingent verfügbar/aufgebraucht) mit Monatsbezug zu Ihrem Konto; es wird mit Ihrem Konto gelöscht. Rechtsgrundlage ist unser berechtigtes Interesse an der Verhinderung von Missbrauch unserer kostenlosen Leistungen (Art. 6 Abs. 1 lit. f DSGVO). Sie können dieser Verarbeitung unter den Voraussetzungen des Art. 21 DSGVO widersprechen."
+              : "To prevent free usage quotas from being circumvented by repeatedly deleting and re-creating accounts, we use Apple's DeviceCheck service (Apple Inc.). Two device-related marker bits are stored with Apple; only we know their meaning, while we in turn receive no device identifier — we cannot identify your device or your person through this. We only store the check result (quota available/used up) with a month reference linked to your account; it is deleted together with your account. The legal basis is our legitimate interest in preventing abuse of our free services (Art. 6(1)(f) GDPR). You may object to this processing under the conditions of Art. 21 GDPR."}
+          </p>
+
+          <h2 className="text-lg font-semibold text-e-text">
+            {isDE ? "6. Nutzungsstatistiken und Fehlerdiagnose" : "6. Usage Statistics and Error Diagnostics"}
           </h2>
           <p>
             {isDE
@@ -62,7 +93,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "5. Käufe und Abonnements" : "5. Purchases and Subscriptions"}
+            {isDE ? "7. Käufe und Abonnements" : "7. Purchases and Subscriptions"}
           </h2>
           <p>
             {isDE
@@ -71,7 +102,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "6. Keine Weitergabe an Unternehmenskunden" : "6. No Sharing with Corporate Clients"}
+            {isDE ? "8. Keine Weitergabe an Unternehmenskunden" : "8. No Sharing with Corporate Clients"}
           </h2>
           <p>
             {isDE
@@ -80,7 +111,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "7. Hosting und Website" : "7. Hosting and Website"}
+            {isDE ? "9. Hosting und Website" : "9. Hosting and Website"}
           </h2>
           <p>
             {isDE
@@ -89,7 +120,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "8. Ihre Rechte" : "8. Your Rights"}
+            {isDE ? "10. Ihre Rechte" : "10. Your Rights"}
           </h2>
           <p>
             {isDE
@@ -98,7 +129,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
           </p>
 
           <h2 className="text-lg font-semibold text-e-text">
-            {isDE ? "9. Kontakt" : "9. Contact"}
+            {isDE ? "11. Kontakt" : "11. Contact"}
           </h2>
           <p>
             {isDE
