@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { PhoneFrame } from "./app-screens/phone-frame";
-import { ScreenOnboarding } from "./app-screens/screen-onboarding";
+import { ScreenProfile } from "./app-screens/screen-profile";
 import { ScreenRadar } from "./app-screens/screen-radar";
 import { ScreenPipeline } from "./app-screens/screen-pipeline";
 
-const STEP_SCREENS = [ScreenOnboarding, ScreenRadar, ScreenPipeline] as const;
+const STEP_SCREENS = [ScreenProfile, ScreenRadar, ScreenPipeline] as const;
 
 export async function HowItWorks() {
   const t = await getTranslations("how");
