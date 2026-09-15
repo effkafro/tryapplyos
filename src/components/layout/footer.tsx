@@ -33,7 +33,7 @@ export function Footer() {
                 alt="Appi"
                 width={28}
                 height={28}
-                className="rounded-md"
+                className="rounded-[22%]"
               />
               <span className="text-base font-serif italic font-semibold text-e-text">
                 ApplyOS

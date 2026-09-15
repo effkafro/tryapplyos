@@ -40,7 +40,7 @@ export function Navbar() {
             alt="Appi"
             width={28}
             height={28}
-            className="rounded-md"
+            className="rounded-[22%]"
           />
           <span className="text-base font-serif italic font-semibold tracking-[-0.01em] text-e-text">
             ApplyOS

@@ -39,7 +39,7 @@ export function ScreenRadar() {
         <div className="mt-3 px-2.5 py-2 bg-app-owl-bubble rounded-xl flex gap-2">
           <div className="w-5 h-5 shrink-0 rounded-full bg-app-purple-soft p-0.5">
             <Image
-              src="/appi-logo.png"
+              src="/appi-avatar.png"
               alt=""
               width={20}
               height={20}

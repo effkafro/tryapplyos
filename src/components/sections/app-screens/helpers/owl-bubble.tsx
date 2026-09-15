@@ -16,7 +16,7 @@ export function OwlBubble({ children, size = "md" }: Props) {
         className="rounded-full shrink-0 bg-app-purple-soft p-[3px]"
       >
         <Image
-          src="/appi-logo.png"
+          src="/appi-avatar.png"
           alt="Appi"
           width={avatar}
           height={avatar}
