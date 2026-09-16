@@ -40,10 +40,6 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     metadataBase: new URL(siteUrl),
-    icons: {
-      icon: "/favicon.ico",
-      apple: "/apple-touch-icon.png",
-    },
     openGraph: {
       title: t("title"),
       description: t("description"),
